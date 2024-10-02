@@ -26,12 +26,23 @@ Weight : Berat badan
   ## Cleaning Data
      Cleaning data pada proses ini data dilakukan pengecekan duplikasi data , data null, dan outlier pada data
      proses cleaning data ini sangat penting dilakukan karena akan menjadi hasil yang buruk apabila proses ini dilewati
+     ![image](https://github.com/user-attachments/assets/eb925291-1930-467e-ad68-1e4960ed58f3)
+
   ## Standarization Data
      Mengubah skala data agar lebih konsisten
 # Modeling
-  ## Kelebihan: Regresi linier mudah diimplementasikan, diinterpretasikan, dan bekerja dengan baik dengan hubungan linier . 
-  ## Kekurangan: Regresi linier sulit digunakan dengan data nonlinier yang kompleks, sensitif terhadap outlier, dan mengasumsikan independensi, homoskedastisitas, dan   
-     kenormalan, yang mungkin tidak berlaku dalam banyak skenario dunia nyata
+Saya memilih metode regresi dalam proyek ini karena data yang saya miliki terdiri dari 25.000 sampel yang hanya mencakup dua variabel, yaitu tinggi badan dan berat badan. Regresi sangat cocok untuk menganalisis hubungan antara dua variabel numerik dan memungkinkan saya untuk membuat prediksi terkait nilai Body Mass Index (BMI) berdasarkan tinggi dan berat badan seseorang.
+
+Regresi linier sederhana dapat menangkap hubungan linier antara dua variabel tersebut secara efektif dan memberikan interpretasi yang mudah dipahami. Dengan data terbatas hanya pada tinggi dan berat, regresi merupakan pilihan yang tepat karena mampu menghasilkan model prediktif dengan akurasi yang baik dan tidak memerlukan fitur tambahan atau algoritma yang lebih kompleks.
+  ## Kelebihan Regresi:
+      Sederhana dan mudah diimplementasikan: Regresi linier mudah dipahami dan digunakan.
+      Interprestasi yang jelas: Hasil regresi memberikan informasi yang jelas tentang hubungan antara variabel independen dan dependen.
+      Performa baik untuk data linier: Bekerja baik jika ada hubungan linier antara variabel.
+  ## Kekurangan Regresi:
+
+      Sensitif terhadap outlier: Regresi sangat terpengaruh oleh data outlier yang dapat menyebabkan model menjadi tidak akurat.
+      Keterbatasan untuk data non-linier: Regresi linier tidak mampu menangani hubungan non-linier tanpa penyesuaian khusus.
+      Multikolinearitas: Jika fitur saling berkorelasi, hasil regresi bisa menjadi tidak stabil.
 # Evaluation
 Penjelasan mengenai metrik yang digunakan:
 
