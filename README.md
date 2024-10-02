@@ -5,6 +5,6 @@ Pengembangan model prediksi BMI (Body Mass Index) berdasarkan data tinggi dan be
 # Problem Statements
 Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang dapat diselesaikan pada proyek ini:
 
-Bagaimana cara membuat model machine learning yang dapat memprediksi BMI berdasarkan data tinggi badan dan berat badan?</br>
-Model seperti apa yang memiliki akurasi terbaik dalam memprediksi BMI?</br>
-Bagaimana model ini dapat membantu individu dan ahli gizi dalam memantau dan meningkatkan kesehatan?
+1.Bagaimana cara membuat model machine learning yang dapat memprediksi BMI berdasarkan data tinggi badan dan berat badan?</br>
+2.Model seperti apa yang memiliki akurasi terbaik dalam memprediksi BMI?</br>
+3.Bagaimana model ini dapat membantu individu dan ahli gizi dalam memantau dan meningkatkan kesehatan?
