@@ -1,5 +1,5 @@
-# predictive-analysis-dicoding
-
+# Predictive-analysis-dicoding
+# Domain project ialah kesehatan dengan judul Predictive Analysis Prediksi BMI (Body Mass Index)
 # Latar Belakang
 
 Latar belakang pembuatan predictive analysis untuk prediksi BMI didasarkan pada kebutuhan akan alat yang dapat membantu individu dan profesional kesehatan dalam memantau status kesehatan seseorang. BMI (Body Mass Index) adalah indikator yang banyak digunakan untuk menentukan apakah seseorang memiliki berat badan ideal, kekurangan berat badan, kelebihan berat badan, atau obesitas, yang semuanya berhubungan dengan risiko kesehatan seperti penyakit jantung, diabetes, dan hipertensi.
