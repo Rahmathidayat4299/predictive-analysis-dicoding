@@ -26,7 +26,7 @@ Weight : Berat badan
   ## Cleaning Data
      Cleaning data pada proses ini data dilakukan pengecekan duplikasi data , data null, dan outlier pada data
      proses cleaning data ini sangat penting dilakukan karena akan menjadi hasil yang buruk apabila proses ini dilewati
-     ![image](https://github.com/user-attachments/assets/eb925291-1930-467e-ad68-1e4960ed58f3)
+![image](https://github.com/user-attachments/assets/eb925291-1930-467e-ad68-1e4960ed58f3)
 
   ## Standarization Data
      Mengubah skala data agar lebih konsisten
