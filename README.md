@@ -19,25 +19,38 @@ Melalui pendekatan berbasis data, perusahaan dapat membangun model prediksi yang
 Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang dapat diselesaikan pada proyek ini:
 bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan (Total) dari kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang?
 
+# Goals
+Tujuan dari Analysis ini ialah
+* Memahami Faktor yang Mempengaruhi Penjualan:
+Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
+* Pengembangan Model Prediksi:
+Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
+* Pengambilan Keputusan Berbasis Data:
+Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
+Optimisasi Strategi Pemasaran:
+
+Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
 
 # Data UnderStanding
 source data => https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales
 # Variabel-variabel pada Data ialah :
-Invoice ID<br>
-Branch<br>
-City<br>
-Customer type<br>
-Gender<br>
-Product line<br>
-Unit price<br>
-Quantity<br>
-Tax 5%	<br>
-Total	Date<br>	
-Time	<br>
-Payment	cogs	<br>
-gross margin percentage<br>
-gross income	<br>
-Rating<br>
+Invoice ID: String (atau kategori) - Merupakan identifikasi unik untuk setiap transaksi dan biasanya dalam format teks.<br>
+Branch: Kategori - Menunjukkan cabang tempat transaksi dilakukan, biasanya berupa huruf (misalnya, A, B, C).<br>
+City: Kategori - Menunjukkan nama kota tempat cabang berlokasi, berupa teks.<br>
+Customer type: Kategori - Mengindikasikan tipe pelanggan, biasanya berupa kategori seperti "Member" atau "Normal".<br>
+Gender: Kategori - Menunjukkan jenis kelamin pelanggan, biasanya berupa "Male" atau "Female".<br>
+Product line: Kategori - Mengindikasikan kategori produk yang dibeli, berupa teks (misalnya, "Health and beauty").<br>
+Unit price: Float - Menunjukkan harga per unit produk, berupa angka desimal.<br>
+Quantity: Integer - Menunjukkan jumlah produk yang dibeli, berupa angka bulat.<br>
+Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
+Total: Float - Menunjukkan total harga setelah pajak, berupa angka desimal.<br>
+Date: Tanggal - Menunjukkan tanggal transaksi, biasanya dalam format teks yang dapat diubah menjadi tipe tanggal.<br>
+Time: Waktu - Menunjukkan waktu transaksi, biasanya dalam format teks (jam)<br>
+Payment: Kategori - Menunjukkan metode pembayaran yang digunakan (misalnya, "Ewallet", "Cash").<br>
+cogs: Float - Menunjukkan biaya barang yang terjual (Cost of Goods Sold), berupa angka desimal.<br>
+gross margin percentage: Float - Menunjukkan persentase margin kotor, berupa angka desimal.<br>
+gross income: Float - Menunjukkan total pendapatan kotor, berupa angka desimal.<br>
+Rating: Float - Menunjukkan rating yang diberikan oleh pelanggan, biasanya dalam skala 1-10, berupa angka desimal.<br>
 
 # Data Preparation
   ## Crawling Data
@@ -45,7 +58,11 @@ Rating<br>
   ## Cleaning Data
      Cleaning data pada proses ini data dilakukan pengecekan duplikasi data , data null, dan outlier pada data
      proses cleaning data ini sangat penting dilakukan karena akan menjadi hasil yang buruk apabila proses ini dilewati
-![image](https://github.com/user-attachments/assets/ae761e27-5cae-4054-a15e-bd25a576bd74)
+![image](https://github.com/user-attachments/assets/27e9c67e-a695-4409-8b63-c4e9b5ca6b1d)
+berikut jumlah outlier pada dataset
+![image](https://github.com/user-attachments/assets/3dd63248-a440-4bf0-9f77-bfd2b1f1f6b4)
+
+
 
 
   ## Standarization Data
@@ -89,22 +106,21 @@ Regresi linier sederhana dapat menangkap hubungan linier antara dua variabel ter
       Keterbatasan untuk data non-linier: Regresi linier tidak mampu menangani hubungan non-linier tanpa penyesuaian khusus.
       Multikolinearitas: Jika fitur saling berkorelasi, hasil regresi bisa menjadi tidak stabil.
 # Evaluation
-Evaluasi model adalah langkah krusial dalam proses pemodelan yang bertujuan untuk mengukur seberapa baik model melakukan prediksi terhadap data yang belum pernah dilihat sebelumnya. Dalam konteks regresi, beberapa metrik evaluasi umum digunakan untuk menilai kinerja model, antara lain:
+* Jawaban dari goals
+* ![image](https://github.com/user-attachments/assets/0fda6e0f-b4f2-4731-bc97-f58b01facb24)
 
-Mean Squared Error (MSE):
+Memahami Faktor yang Mempengaruhi Penjualan:
 
-MSE mengukur rata-rata kuadrat dari kesalahan antara nilai yang diprediksi dan nilai aktual. Metrik ini memberikan gambaran seberapa besar kesalahan prediksi model secara keseluruhan. MSE yang lebih rendah menunjukkan bahwa model lebih akurat dalam memprediksi total penjualan.
-Mean Absolute Error (MAE):
+Melalui analisis data, model regresi XGBoost menunjukkan bahwa kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang memiliki pengaruh signifikan terhadap total penjualan. Misalnya, model dapat mengidentifikasi bahwa jenis produk tertentu lebih populer di lokasi cabang tertentu, dan bahwa pelanggan dengan profil tertentu cenderung melakukan pembelian dengan nilai yang lebih tinggi.
+Pengembangan Model Prediksi:
 
-MAE mengukur rata-rata dari nilai absolut dari kesalahan antara prediksi dan nilai aktual. MAE memberikan gambaran tentang seberapa besar kesalahan prediksi dalam satuan yang sama dengan variabel target. Ini berguna untuk memahami rata-rata kesalahan yang mungkin terjadi.
-Root Mean Squared Error (RMSE):
+Dengan melatih model regresi menggunakan dataset yang mencakup variabel-variabel kunci, kami berhasil membangun model yang dapat memprediksi total penjualan dengan akurasi tinggi. Hasil evaluasi menunjukkan Mean Squared Error (MSE) yang rendah dan R-squared yang sangat tinggi (0.9999), yang menunjukkan kemampuan model dalam menjelaskan variabilitas penjualan.
+Pengambilan Keputusan Berbasis Data:
 
-RMSE adalah akar kuadrat dari MSE dan memberikan ukuran kesalahan dalam satuan yang sama dengan variabel target. RMSE sering digunakan karena memberikan penalti yang lebih besar untuk kesalahan yang lebih besar, sehingga lebih sensitif terhadap outlier.
-R-squared (R²):
+Hasil dari model prediksi memberikan dasar yang kuat bagi manajemen untuk membuat keputusan strategis. Misalnya, jika model menunjukkan bahwa penjualan meningkat pada jenis pelanggan tertentu selama periode tertentu, perusahaan dapat memfokuskan upaya pemasaran dan penjualan kepada segmen tersebut untuk memaksimalkan pendapatan.
+Optimisasi Strategi Pemasaran:
 
-R-squared mengukur proporsi variabilitas dalam data target yang dapat dijelaskan oleh model. Nilai R-squared berkisar antara 0 dan 1, di mana nilai yang lebih dekat ke 1 menunjukkan bahwa model mampu menjelaskan sebagian besar variasi dalam data. R² yang tinggi menunjukkan bahwa model sangat baik dalam memprediksi total penjualan.
-Kesimpulan Evaluasi
-Dengan menggunakan metrik-metrik ini, model regresi yang telah dilatih dapat dinilai secara komprehensif. Hasil evaluasi menunjukkan seberapa baik model dapat memprediksi total penjualan berdasarkan variabel-variabel yang relevan. Metrik yang baik dan hasil evaluasi yang positif menandakan bahwa model dapat diandalkan untuk memberikan insight dan prediksi yang bermanfaat bagi pengambilan keputusan bisnis.
+Dengan wawasan yang diperoleh dari model prediksi, perusahaan dapat mengoptimalkan strategi pemasaran mereka. Misalnya, jika analisis menunjukkan bahwa jenis produk A lebih banyak dibeli oleh pelanggan B di cabang C, perusahaan dapat merancang promosi khusus atau penawaran untuk menarik lebih banyak pelanggan di segmen ini. Selain itu, hasil model dapat digunakan untuk merencanakan stok produk secara lebih efektif, menghindari kehabisan stok atau overstocking.
 
 ![image](https://github.com/user-attachments/assets/895830b7-f639-4605-b288-5a95d3be3f37)
 
