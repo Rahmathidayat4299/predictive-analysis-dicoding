@@ -23,7 +23,7 @@ bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan 
 # Data UnderStanding
 source data => https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales
 # Variabel-variabel pada Data ialah :
-Invoice ID	
+Invoice ID<br>
 Branch
 City
 Customer type
