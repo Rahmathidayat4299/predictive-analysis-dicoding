@@ -9,7 +9,17 @@ Original file is located at
 ##Rahmat Hidayat
 ##Submission Dicoding Predictive analysis Sales Supermarket
 
-##Pertama, import library yang dibutuhkan. Anda dapat melakukannya di awal, atau di tiap kode sel.
+##Pertama, import library yang dibutuhkan.
+## Import Library:
+
+* import numpy as np: Mengimpor library NumPy yang digunakan untuk operasi matematis dan manipulasi array.
+import pandas as pd: Mengimpor library Pandas yang digunakan untuk analisis data dan manipulasi struktur data seperti DataFrame.
+* import matplotlib.pyplot as plt: Mengimpor modul Pyplot dari Matplotlib untuk membuat visualisasi data dalam bentuk grafik.
+* import seaborn as sns: Mengimpor Seaborn, yang merupakan library visualisasi data yang dibangun di atas Matplotlib, untuk membuat grafik yang lebih menarik dan informatif.
+Pengaturan Visualisasi:
+
+* %matplotlib inline: Menyediakan perintah magic untuk Jupyter Notebook yang memungkinkan grafik yang dihasilkan oleh Matplotlib ditampilkan langsung di dalam notebook.
+* Secara keseluruhan, kode ini mempersiapkan lingkungan untuk analisis data dan visualisasi dengan menggunakan beberapa library penting di Python.
 """
 
 # Commented out IPython magic to ensure Python compatibility.
@@ -19,7 +29,18 @@ import pandas as pd
 # %matplotlib inline
 import seaborn as sns
 
-"""# Crawling Data"""
+"""# Crawling Data
+
+Mendefinisikan URL:
+
+* url = "https://github.com/Rahmathidayat4299/data-machine-learning/raw/refs/heads/master/supermarket_sales%20-%20Sheet1.csv": Kode ini mendefinisikan sebuah variabel url yang menyimpan alamat URL dari file CSV yang akan diunduh. URL ini mengarah ke file data penjualan supermarket yang dihosting di GitHub.
+Mengimpor Data dari URL:
+
+* salesmarket = pd.read_csv(url): Kode ini menggunakan fungsi pd.read_csv() dari library Pandas untuk membaca data dari file CSV yang terletak di URL yang telah ditentukan. Data yang diunduh kemudian disimpan dalam variabel salesmarket, yang merupakan sebuah DataFrame Pandas.
+Menyimpan dan Menampilkan Data:
+
+* Setelah eksekusi kode ini, variabel salesmarket akan berisi seluruh data dari file CSV yang dapat digunakan untuk analisis lebih lanjut.
+"""
 
 url = "https://github.com/Rahmathidayat4299/data-machine-learning/raw/refs/heads/master/supermarket_sales%20-%20Sheet1.csv"
 salesmarket = pd.read_csv(url)
@@ -30,20 +51,43 @@ salesmarket
 # Cleaning Process Data
 Proses membersihkan data mulai dari pengecekan :
 
-*   Pengecekan null pada data
-*   Pengecekan duplicated pada data
-*   Pengecekan Outlier pada data
+* Cek Nilai Null: Kode checksalesnull = salesmarket.isnull().sum() menghitung jumlah nilai null dalam setiap kolom DataFrame salesmarket, memberikan informasi tentang kualitas data.
+
+* Cek Baris Duplikat: Kode checksalesduplicate = salesmarket.duplicated().sum() menghitung total baris duplikat di DataFrame, membantu mengidentifikasi apakah ada data yang redundan.
+
+* Tampilkan Hasil: Kode print() menampilkan jumlah nilai null per kolom, jumlah baris duplikat, dan statistik deskriptif dari DataFrame menggunakan salesmarket.describe(), memberikan gambaran umum tentang distribusi data.
 
 Data yang bersih akan memudah melatih model dan menghasilkan prediksi yang baik
 """
 
-salesmarket.describe()
-checkbodynull = salesmarket.isnull().sum()
-checkbodyduplicate = salesmarket.duplicated().sum()
-checkbodynull
-checkbodyduplicate
+# Cek jumlah nilai null dalam DataFrame
+checksalesnull = salesmarket.isnull().sum()
 
-"""# Penanganan Outlier"""
+# Cek jumlah baris duplikat dalam DataFrame
+checksalesduplicate = salesmarket.duplicated().sum()
+
+# Tampilkan hasil
+print("Jumlah nilai null:\n", checksalesnull)
+print("Jumlah baris duplikat:", checksalesduplicate)
+print(salesmarket.describe())
+
+"""# Penanganan Outlier
+Menentukan Kolom Relevan:
+
+* Kode ini mulai dengan mendefinisikan kolom numerik yang relevan (Unit price, Quantity, Total, Rating) untuk analisis outlier.
+Menghitung Kuartil dan IQR:
+
+* Menghitung kuartil pertama (Q1) dan kuartil ketiga (Q3) untuk kolom-kolom tersebut menggunakan fungsi quantile(). IQR (Interquartile Range) dihitung sebagai selisih antara Q3 dan Q1, yang digunakan untuk menentukan batasan dalam mendeteksi outlier.
+Menentukan Batas Outlier:
+
+* Batas bawah dan batas atas untuk mendeteksi outlier ditentukan dengan rumus:
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR.
+Outlier kemudian ditentukan dengan memeriksa apakah nilai-nilai dalam kolom tersebut berada di luar batas yang telah ditentukan.
+Menampilkan Hasil:
+
+* Kode ini menampilkan jumlah outlier yang terdeteksi serta informasi mengenai data tersebut. Jika terdapat nilai yang berada di luar batas yang ditetapkan, data tersebut akan dianggap sebagai outlier dan ditampilkan.
+"""
 
 import pandas as pd
 
@@ -106,6 +150,17 @@ salesmarketclean.duplicated().sum()
 
 """# Menjawab Pertanyaan
   ## Bagaimana kita bisa memprediksi total penjualan (Total) dari kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang?
+
+* Penjelasan kode
+* Kode ini melakukan One-Hot Encoding pada variabel kategorikal dalam DataFrame salesmarketclean. Berikut adalah penjelasan singkatnya:
+
+* One-Hot Encoding: Proses ini digunakan untuk mengubah variabel kategorikal menjadi format numerik, sehingga dapat digunakan dalam model machine learning. Setiap kategori dari variabel kategorikal diwakili oleh kolom baru, yang berisi nilai 0 atau 1 (1 jika data memiliki kategori tersebut, 0 jika tidak).
+
+* pd.get_dummies: Fungsi dari pandas yang digunakan untuk melakukan One-Hot Encoding. Parameter columns menentukan kolom mana yang akan diubah menjadi format numerik.
+
+* drop_first=True: Parameter ini menginstruksikan fungsi untuk menghapus satu kolom dari hasil encoding untuk menghindari dummy variable trap, yaitu masalah multikolinearitas yang terjadi ketika salah satu kolom dapat diprediksi dari kolom lainnya.
+
+* Hasil: Variabel kategorikal yang tercantum (Customer type, Product line, Branch, City, Gender, Payment) akan diubah menjadi beberapa kolom biner, dan DataFrame yang dihasilkan disimpan dalam variabel df_encoded.
 """
 
 # Mengubah variabel kategorikal menjadi numerik menggunakan One-Hot Encoding
@@ -114,6 +169,13 @@ df_encoded = pd.get_dummies(salesmarketclean, columns=['Customer type', 'Product
 """#Model Development
 #Langkah 1: Memisahkan Fitur dan Target
 Selanjutnya, kita pisahkan fitur (X) dan target (y), di mana target adalah variabel Total.
+* Kode dibawah ini  mempersiapkan data dengan menentukan fitur (X) dan target (y) yang akan digunakan untuk membangun model.
+
+Penjelasan Kode:
+* Menentukan Fitur (X):
+X adalah DataFrame yang berisi semua kolom dari df_encoded kecuali kolom Total, Invoice ID, Date, dan Time. Ini adalah variabel independen yang akan digunakan untuk pelatihan model.
+* Menentukan Target (y):
+y adalah Series yang berisi nilai dari kolom Total, yang merupakan variabel dependen yang ingin diprediksi oleh model.
 """
 
 # Menentukan fitur dan target
@@ -132,6 +194,20 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 """# Langkah 3: Membangun Model Regresi
 ## Regresi Linier
 Kita bisa memulai dengan Regresi Linier untuk memprediksi total penjualan berdasarkan fitur-fitur yang ada.
+Berikut adalah beberapa parameter utama yang tersedia untuk LinearRegression
+
+* fit_intercept:
+Tipe: Boolean (default: True)
+Deskripsi: Menentukan apakah model akan menghitung intercept (konstanta) untuk setiap fitur. Jika diatur ke False, model tidak akan menghitung intercept dan anggap intercept sebagai 0.
+* normalize:
+Tipe: Boolean (default: False)
+Deskripsi: Menentukan apakah fitur harus dinormalisasi sebelum regresi. Jika True, semua fitur akan dinormalisasi sehingga memiliki rata-rata 0 dan varians 1.
+* copy_X:
+Tipe: Boolean (default: True)
+Deskripsi: Jika True, salinan dari X akan dibuat. Jika False, X dapat diubah dalam tempat.
+*n_jobs:
+Tipe: Integer atau None (default: None)
+Deskripsi: Menentukan jumlah pekerjaan yang akan digunakan untuk menghitung regresi. Jika diatur ke -1, semua prosesor akan digunakan.
 """
 
 from sklearn.linear_model import LinearRegression
@@ -221,6 +297,24 @@ grid_search = GridSearchCV(
 grid_search.fit(X_train, y_train)
 print("Best parameters found: ", grid_search.best_params_)
 
+"""# Melatih dan Mengevaluasi Model XGBoost untuk Prediksi Total Penjualan
+Import Library dan Model:
+
+* Kode ini mengimpor library xgboost dan menginisialisasi model XGBoost Regressor dengan parameter terbaik yang telah ditentukan sebelumnya, yaitu colsample_bytree, learning_rate, max_depth, n_estimators, dan subsample.
+Melatih Model:
+
+* Model yang telah diinisialisasi (xgb_best) kemudian dilatih (fit) menggunakan data pelatihan (X_train dan y_train). Proses ini mempelajari pola dari data pelatihan untuk digunakan dalam prediksi.
+Melakukan Prediksi:
+
+* Setelah model dilatih, kode ini melakukan prediksi pada data uji (X_test) menggunakan metode predict(). Hasil prediksi disimpan dalam variabel y_pred.
+Evaluasi Performa Model:
+
+* Kode ini kemudian mengimpor metrik evaluasi dari sklearn.metrics, yaitu mean_squared_error dan r2_score.
+mean_squared_error digunakan untuk menghitung kesalahan kuadrat rata-rata (MSE) antara nilai aktual (y_test) dan prediksi (y_pred), yang menunjukkan seberapa besar kesalahan model.
+r2_score menghitung koefisien determinasi (R-squared), yang menunjukkan seberapa baik variabel independen dalam model dapat menjelaskan variasi variabel dependen.
+Hasil MSE dan R-squared dicetak untuk memberikan gambaran tentang kinerja model yang telah dilatih.
+"""
+
 import xgboost as xgb
 # Melatih ulang model dengan parameter terbaik
 xgb_best = xgb.XGBRegressor(
@@ -249,6 +343,21 @@ print(f"R-squared: {r2}")
 """#Evaluasi Model
 ## Visualisasi Hasil Prediksi
 Grafik ini menunjukkan bagaimana hasil prediksi dibandingkan dengan nilai aktual. Idealnya, jika model Anda sempurna, semua titik akan berada pada garis 45 derajat (prediksi = nilai aktual).
+
+* visualisasi tersebut menjawab pertanyaan tentang bagaimana Anda bisa memprediksi total penjualan (Total) dari kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang. Berikut adalah beberapa cara visualisasi tersebut mendukung jawaban atas pertanyaan ini:
+
+## Penjelasan
+Keterkaitan Variabel:
+
+* Visualisasi menunjukkan bahwa model regresi yang digunakan (XGBoost) berhasil memprediksi total penjualan dengan baik berdasarkan variabel-variabel yang diberikan (jenis pelanggan, jenis produk, dan lokasi cabang). Ini memberikan bukti bahwa model dapat menangkap hubungan antara variabel-variabel tersebut dan total penjualan.
+Akurasi Prediksi:
+
+* Dengan nilai prediksi yang hampir identik dengan nilai aktual, visualisasi menunjukkan bahwa model tersebut tidak hanya mampu menghasilkan prediksi, tetapi juga melakukannya dengan tingkat akurasi yang tinggi. Ini mengindikasikan bahwa pendekatan yang digunakan untuk menggabungkan variabel-variabel tersebut efektif.
+Metode yang Digunakan:
+
+* Menggunakan model regresi seperti XGBoost menunjukkan bahwa Anda telah menerapkan teknik machine learning yang sesuai untuk memprediksi total penjualan. Hal ini menunjukkan bahwa Anda telah memilih metode yang tepat untuk menangani masalah yang kompleks ini.
+* Kesimpulan
+Dengan demikian, visualisasi tersebut sangat mendukung pertanyaan awal tentang bagaimana total penjualan dapat diprediksi. Ini menunjukkan bahwa kombinasi variabel yang Anda gunakan memberikan hasil yang kuat dan bahwa model Anda dapat diandalkan untuk memprediksi total penjualan dengan baik.
 """
 
 import matplotlib.pyplot as plt
@@ -280,6 +389,8 @@ plt.show()
 
 """# Distribusi Error (Histogram dari Residual):
 Dengan melihat distribusi residual, Anda bisa mengecek apakah error tersebar dengan normal, yang mengindikasikan model yang baik.
+
+Grafik distribusi residual memberikan pemahaman yang lebih mendalam tentang kinerja model Anda. Dengan mengetahui bahwa model cenderung meremehkan penjualan, Anda dapat mengambil langkah-langkah untuk memperbaikinya.
 """
 
 # Plot distribusi residual (error)
@@ -294,6 +405,19 @@ plt.show()
 
 Mean Absolute Error (MAE) memberikan rata-rata absolut error yang lebih mudah diinterpretasikan karena tidak memberikan penalti lebih tinggi untuk outlier.
 Root Mean Squared Error (RMSE) adalah akar kuadrat dari MSE dan memberikan gambaran yang lebih intuitif terkait dengan skala error.
+
+Berikut adalah penjelasan tentang nilai Mean Absolute Error (MAE) dan Root Mean Squared Error (RMSE) yang Anda berikan:
+
+1. Mean Absolute Error (MAE)
+Definisi: MAE adalah rata-rata dari selisih absolut antara nilai yang diprediksi oleh model dan nilai sebenarnya. Ini memberikan gambaran seberapa besar kesalahan prediksi dalam unit yang sama dengan data asli.
+Nilai Anda: 1.7389
+Interpretasi: Nilai MAE sebesar 1.7389 berarti bahwa, rata-rata, model Anda melakukan kesalahan sebesar 1.7389 unit pada prediksi total penjualan. Semakin kecil nilai MAE, semakin baik kinerja model dalam memprediksi data.
+2. Root Mean Squared Error (RMSE)
+Definisi: RMSE adalah akar kuadrat dari rata-rata kuadrat kesalahan antara nilai yang diprediksi dan nilai aktual. RMSE memberikan bobot lebih pada kesalahan yang lebih besar karena nilai kesalahan dikuadratkan sebelum dihitung rata-ratanya.
+Nilai Anda: 2.6692
+Interpretasi: Nilai RMSE sebesar 2.6692 menunjukkan bahwa kesalahan rata-rata prediksi model Anda adalah sekitar 2.6692 unit. RMSE lebih sensitif terhadap outlier dibandingkan MAE, sehingga bisa memberi gambaran yang lebih jelas tentang kinerja model dalam hal prediksi yang jauh dari nilai aktual.
+Kesimpulan
+MAE dan RMSE keduanya digunakan untuk mengevaluasi kinerja model regresi, dengan RMSE memberikan penekanan lebih pada kesalahan besar. Dalam konteks model Anda, nilai-nilai tersebut menunjukkan bahwa model cukup baik dalam memprediksi total penjualan, meskipun masih ada ruang untuk perbaikan. Sebaiknya, Anda membandingkan nilai ini dengan nilai MAE dan RMSE dari model lain untuk mendapatkan pemahaman yang lebih baik tentang kinerja model Anda.
 """
 
 from sklearn.metrics import mean_absolute_error
