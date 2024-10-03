@@ -24,20 +24,20 @@ bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan 
 source data => https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales
 # Variabel-variabel pada Data ialah :
 Invoice ID<br>
-Branch
-City
-Customer type
-Gender
-Product line
-Unit price
-Quantity
-Tax 5%	
-Total	Date	
-Time	
-Payment	cogs	
-gross margin percentage
-gross income	
-Rating
+Branch<br>
+City<br>
+Customer type<br>
+Gender<br>
+Product line<br>
+Unit price<br>
+Quantity<br>
+Tax 5%	<br>
+Total	Date<br>	
+Time	<br>
+Payment	cogs	<br>
+gross margin percentage<br>
+gross income	<br>
+Rating<br>
 
 # Data Preparation
   ## Crawling Data
