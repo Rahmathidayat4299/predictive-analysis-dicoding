@@ -181,9 +181,8 @@ Meskipun XGBoost memiliki MSE yang lebih besar dibandingkan Linear Regression, R
 Namun, XGBoost biasanya lebih robust terhadap data yang memiliki non-linearitas, sehingga model ini bisa lebih baik dalam menangani data baru yang lebih kompleks dibanding Linear Regression.
 
 Komparasi Model
-Model	Mean Squared Error (MSE)	R-squared (R²)
-Linear Regression	5.96e-27	1.0
-XGBoost Regressor	10.015	0.9998
+![image](https://github.com/user-attachments/assets/ede81ddd-8880-421d-9b5b-cae3b6c885ff)
+
 Linear Regression memiliki MSE yang sangat kecil dan R-squared yang sempurna, namun ini bisa menjadi indikasi overfitting, terutama jika data yang dilatih bersifat sangat linear atau terlalu sederhana.
 XGBoost memiliki MSE yang sedikit lebih besar dan R-squared yang hampir sempurna, namun model ini lebih fleksibel dalam menangani data yang lebih kompleks.
 Kesimpulan dari Komparasi:
@@ -195,6 +194,4 @@ Melalui evaluasi model Linear Regression dan XGBoost Regressor, kita dapat menja
 Hasil Evaluasi Model:
 Linear Regression memberikan hasil evaluasi dengan R-squared sebesar 1.0, yang menunjukkan bahwa model ini dapat menjelaskan 100% variasi dalam total penjualan.
 XGBoost Regressor dengan R-squared sebesar 0.9998 juga hampir sempurna dan lebih robust terhadap kemungkinan variasi dalam data.
-
-![image](https://github.com/user-attachments/assets/895830b7-f639-4605-b288-5a95d3be3f37)
 
