@@ -28,11 +28,40 @@ Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjual
 * Pengambilan Keputusan Berbasis Data:
 Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
 Optimisasi Strategi Pemasaran:
-
 Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
 
 # Data UnderStanding
-source data => https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales
+1. Jumlah Data (Baris dan Kolom):
+Baris (Jumlah data): Dataset ini menampilkan nomor baris dari 0 hingga 999, yang menunjukkan bahwa ada 1.000 baris (data point).
+Kolom: Terdapat 17 kolom dalam dataset ini.
+2. Kondisi Data:
+Data terlihat cukup rapi, tidak ada nilai yang hilang atau tidak wajar dalam tampilan data ini.
+Nilai pada kolom seperti Total, Unit price, dan Quantity tampak konsisten dan realistis.
+Kolom Date dan Time memiliki format yang seragam, di mana tanggal menggunakan format MM/DD/YYYY.
+3. Tautan Sumber Data:
+https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales .
+4. Uraian Seluruh Fitur (Kolom) Pada Data:
+Penjelasan mengenai setiap fitur dalam dataset:
+
+Invoice ID: Nomor identifikasi unik untuk setiap transaksi.
+Branch (Cabang): Cabang toko di mana penjualan terjadi (misalnya: 'A', 'B', 'C').
+City (Kota): Kota di mana cabang toko tersebut berada (contoh: 'Yangon', 'Naypyitaw').
+Customer type (Jenis Pelanggan): Jenis pelanggan, yaitu Member (Anggota) atau Normal (Non-anggota).
+Gender (Jenis Kelamin): Jenis kelamin pelanggan (misalnya: 'Male' untuk laki-laki dan 'Female' untuk perempuan).
+Product line (Lini Produk): Kategori produk yang dijual (contoh: 'Health and beauty', 'Fashion accessories').
+Unit price (Harga Satuan): Harga per satuan produk yang dibeli.
+Quantity (Jumlah): Jumlah unit produk yang dibeli dalam satu transaksi.
+Tax 5% (Pajak 5%): Pajak yang diterapkan pada pembelian dengan tarif 5%.
+Total: Jumlah total yang dibayarkan, termasuk pajak.
+Date (Tanggal): Tanggal terjadinya transaksi.
+Time (Waktu): Waktu terjadinya transaksi.
+Payment (Pembayaran): Metode pembayaran yang digunakan (misalnya: 'Cash' untuk tunai, 'Credit card' untuk kartu kredit, atau 'Ewallet').
+COGS (Cost of Goods Sold / Biaya Produksi): Biaya langsung yang dapat dikaitkan dengan produksi barang yang dijual.
+Gross margin percentage (Persentase Margin Kotor): Persentase dari total pendapatan penjualan yang dipertahankan perusahaan setelah mengeluarkan biaya langsung yang terkait dengan produksi barang. (Nilai ini tampaknya konstan pada 4.761905 dalam dataset ini).
+Gross income (Pendapatan Kotor): Pendapatan yang diperoleh dari penjualan, dihitung sebagai Total - COGS.
+Rating: Peringkat yang diberikan pelanggan untuk transaksi tersebut, mungkin dalam skala 1 hingga 10.
+
+
 # Variabel-variabel pada Data ialah :
 Invoice ID: String (atau kategori) - Merupakan identifikasi unik untuk setiap transaksi dan biasanya dalam format teks.<br>
 Branch: Kategori - Menunjukkan cabang tempat transaksi dilakukan, biasanya berupa huruf (misalnya, A, B, C).<br>
@@ -53,74 +82,119 @@ gross income: Float - Menunjukkan total pendapatan kotor, berupa angka desimal.<
 Rating: Float - Menunjukkan rating yang diberikan oleh pelanggan, biasanya dalam skala 1-10, berupa angka desimal.<br>
 
 # Data Preparation
-  ## Crawling Data
-  Menyiapkan data yang akan di analysis prediksi.
-  ## Cleaning Data
-     Cleaning data pada proses ini data dilakukan pengecekan duplikasi data , data null, dan outlier pada data
-     proses cleaning data ini sangat penting dilakukan karena akan menjadi hasil yang buruk apabila proses ini dilewati
-![image](https://github.com/user-attachments/assets/27e9c67e-a695-4409-8b63-c4e9b5ca6b1d)
-berikut jumlah outlier pada dataset
+1. Cek Nilai Null dan Duplikat
+Tujuan: Untuk memeriksa apakah terdapat nilai kosong (null) atau baris duplikat dalam dataset yang dapat mempengaruhi kualitas data.
+Langkah:
+Menggunakan .isnull().sum() untuk menghitung jumlah nilai null pada setiap kolom.
+Menggunakan .duplicated().sum() untuk menghitung jumlah baris duplikat.
+Hasil: Tidak ditemukan nilai null maupun duplikat dalam dataset, sehingga tidak perlu melakukan imputasi atau penghapusan baris.
+2. Menghitung Statistik Deskriptif
+Tujuan: Untuk memahami distribusi data seperti mean, standar deviasi, dan kuartil dari kolom numerik.
+Langkah:
+Menggunakan .describe() untuk melihat statistik dasar, seperti rata-rata (mean), nilai minimum (min), maksimum (max), dan kuartil (Q1, Q3).
+Hasil: Statistik ini memberikan gambaran umum tentang distribusi nilai pada setiap kolom numerik.
+3. Deteksi dan Penanganan Outlier
 ![image](https://github.com/user-attachments/assets/3dd63248-a440-4bf0-9f77-bfd2b1f1f6b4)
+Tujuan: Untuk mendeteksi data yang berada di luar batas normal atau rentang data yang wajar (outlier).
+Langkah:
+Menentukan numerical columns yang relevan untuk outlier (misalnya, Unit price, Quantity, Total, dan Rating).
+Menghitung Kuartil Pertama (Q1) dan Kuartil Ketiga (Q3) menggunakan .quantile().
+Menghitung Interquartile Range (IQR) dengan rumus IQR = Q3 - Q1.
+Menentukan batas bawah dan batas atas outlier menggunakan rumus Q1 - 1.5 * IQR dan Q3 + 1.5 * IQR.
+Mendeteksi outlier dengan memeriksa apakah ada nilai di bawah batas bawah atau di atas batas atas pada setiap kolom.
+Hasil: Terdeteksi 9 outlier yang kemudian bisa dianalisis lebih lanjut, apakah akan dihapus atau diperbaiki.
+4. Encoding (One-Hot Encoding)
+Tujuan: Mengubah data kategorikal menjadi bentuk numerik agar dapat digunakan dalam model machine learning.
+Langkah:
+Menggunakan One-Hot Encoding dengan fungsi pd.get_dummies() untuk variabel kategorikal, yaitu Customer type, Product line, Branch, City, Gender, dan Payment.
+Parameter drop_first=True digunakan untuk menghindari multikolinearitas dengan membuang salah satu kategori sebagai referensi.
+Hasil: Variabel kategorikal dikonversi menjadi variabel dummy (0 atau 1), dan dataset siap digunakan dalam pemodelan.
+5. Split Data (Pemecahan Data)
+Tujuan: Memisahkan dataset menjadi data latih (training set) dan data uji (test set) untuk memvalidasi performa model.
+Langkah:
+Biasanya menggunakan train_test_split() dari Scikit-Learn untuk membagi dataset menjadi dua bagian.
+Proporsi umum yang digunakan adalah 80% untuk data latih dan 20% untuk data uji.
+Hasil: Dataset terbagi dengan baik sehingga model dapat dilatih pada data latih dan divalidasi pada data uji.
+6. Kesimpulan Data Preparation
+Dataset sudah melalui berbagai tahap persiapan, termasuk pengecekan kualitas data (null dan duplikat), deteksi outlier, encoding variabel kategorikal, dan pembagian dataset untuk pelatihan dan pengujian. Setiap tahap dilakukan untuk memastikan data bersih dan siap digunakan dalam pemodelan machine learning.
+![image](https://github.com/user-attachments/assets/27e9c67e-a695-4409-8b63-c4e9b5ca6b1d)
 
-
-
-
-  ## Standarization Data
+## Standarization Data
      Mengubah skala data agar lebih konsisten
 
 ## Modeling: Regresi
-Dalam proyek ini, model regresi digunakan untuk memprediksi total penjualan berdasarkan kombinasi variabel yang berpengaruh, seperti jenis pelanggan, jenis produk, dan lokasi cabang. Regresi adalah teknik analisis statistik yang memungkinkan kita untuk memahami hubungan antara satu variabel dependen (dalam hal ini, total penjualan) dan satu atau lebih variabel independen (fitur yang mempengaruhi penjualan).
+1. Regresi Linier
+Regresi Linier adalah salah satu algoritma dasar dalam supervised learning yang bertujuan untuk memprediksi variabel target kontinu (numerik) berdasarkan variabel prediktor (fitur). Model ini mengasumsikan adanya hubungan linear antara variabel prediktor (X) dan target (y), dan menghasilkan garis lurus yang mendekati titik-titik data sebaik mungkin.
 
-Mengapa Memilih Regresi?
-Keterhubungan yang Jelas: Regresi sangat berguna ketika ada harapan bahwa variabel independen akan memiliki pengaruh yang signifikan terhadap variabel dependen. Dalam konteks ini, kami percaya bahwa faktor-faktor seperti jenis pelanggan dan jenis produk dapat memengaruhi total penjualan.
+Cara Kerja:
+Regresi linier menghitung koefisien (slope) dan konstanta (intercept) untuk setiap fitur dalam dataset dengan tujuan meminimalkan perbedaan antara prediksi model dan nilai aktual. 
+Parameter Utama:
+fit_intercept: Menentukan apakah model harus menghitung intercept atau tidak. Jika False, maka garis akan melalui titik asal.
+normalize: Menentukan apakah input harus dinormalisasi sebelum melakukan regresi.
+n_jobs: Menentukan jumlah thread yang digunakan untuk komputasi, default adalah None, yang berarti hanya menggunakan satu thread.
 
-Prediksi Nilai Kontinu: Total penjualan adalah variabel kontinu yang dapat diprediksi dengan baik menggunakan model regresi. Ini memungkinkan perusahaan untuk meramalkan penjualan di masa depan berdasarkan faktor-faktor yang telah dianalisis.
+2. XGBoost Regressor
+XGBoost (Extreme Gradient Boosting) adalah algoritma ensemble yang sangat populer dalam kompetisi data science. Ini menggunakan teknik boosting yang bertujuan untuk meningkatkan performa model dengan membangun model regresi atau klasifikasi secara bertahap, di mana setiap model mencoba memperbaiki kesalahan dari model sebelumnya.
 
-Interpretabilitas: Model regresi memberikan koefisien untuk setiap fitur, yang memungkinkan analisis mendalam tentang seberapa besar setiap faktor memengaruhi total penjualan. Ini memberikan wawasan yang dapat diterapkan dalam pengambilan keputusan bisnis.
+Cara Kerja:
+Boosting: XGBoost menggabungkan beberapa model keputusan (decision tree) secara bertahap. Setiap model baru fokus pada memperbaiki kesalahan model sebelumnya dengan menambahkan bobot lebih pada observasi yang sulit diprediksi.
+Gradient Descent: Algoritma ini menggunakan gradient descent untuk mengoptimalkan fungsi loss dan secara bertahap mengurangi error dari model.
+Regularisasi: XGBoost menggunakan regularisasi L1 (Lasso) dan L2 (Ridge) untuk mengurangi risiko overfitting dengan menghukum model yang terlalu kompleks.
+Parameter Utama:
+n_estimators: Jumlah pohon keputusan yang dibangun secara bertahap.
+learning_rate: Mengontrol ukuran langkah yang diambil dalam setiap iterasi boosting. Nilai yang lebih kecil menghasilkan proses yang lebih lambat tetapi lebih stabil.
+max_depth: Kedalaman maksimum pohon keputusan. Nilai yang lebih besar memungkinkan pohon menjadi lebih kompleks.
+objective: Fungsi loss yang akan dioptimalkan. Dalam kasus regresi, kita menggunakan 'reg:squarederror', yang berarti meminimalkan mean squared error.
+random_state: Seed yang digunakan untuk pengacakan, memastikan hasil yang dapat direproduksi.
+subsample: Persentase sampel data yang digunakan untuk membangun setiap pohon. Nilai yang lebih rendah dapat membantu mengurangi overfitting.
+3. Optimasi Hyperparameter (Hyperparameter Tuning)
+Setelah membangun model, optimasi hyperparameter sangat penting untuk meningkatkan performa model. Hyperparameter adalah parameter yang tidak dipelajari langsung dari data, melainkan harus ditentukan sebelum pelatihan. Proses tuning melibatkan mencoba beberapa kombinasi nilai hyperparameter untuk menemukan pengaturan terbaik.
 
-Jenis Regresi yang Digunakan
-Regresi Linier: Digunakan untuk model dasar yang memberikan gambaran awal tentang hubungan antara variabel. Ini berguna untuk memahami pola umum dalam data.
+Langkah-Langkah Hyperparameter Tuning:
+Grid Search: Mencoba semua kombinasi dari daftar nilai hyperparameter yang telah didefinisikan sebelumnya.
+![image](https://github.com/user-attachments/assets/706a89de-2bee-40eb-8754-f87c84c3f618)
 
-Regresi XGBoost: Model ini diterapkan setelah pengujian regresi linier untuk mendapatkan hasil yang lebih akurat dan mempertimbangkan interaksi antara fitur. XGBoost adalah algoritma boosting yang dikenal karena kemampuannya dalam menangani kompleksitas data dan memberikan prediksi yang lebih baik.
-
-Proses Modeling
-Pemisahan Data: Dataset dibagi menjadi dua bagian: data pelatihan dan data pengujian. Model dilatih menggunakan data pelatihan dan dievaluasi menggunakan data pengujian.
-
-Pelatihan Model: Model regresi dilatih dengan menggunakan variabel independen untuk memprediksi total penjualan.
-
-Evaluasi Model: Model dievaluasi dengan metrik seperti Mean Squared Error (MSE), Mean Absolute Error (MAE), dan R-squared untuk mengukur kinerja model.
-
-Hyperparameter Tuning: Untuk meningkatkan performa model, hyperparameter tuning dilakukan menggunakan teknik seperti Grid Search untuk menemukan kombinasi parameter terbaik.
-
-Hasil
-Model regresi XGBoost menunjukkan hasil yang sangat baik dengan nilai R-squared mendekati 1, menunjukkan bahwa model mampu menjelaskan hampir semua variabilitas dalam data. Dengan menggunakan model ini, perusahaan dapat membuat proyeksi penjualan yang lebih akurat dan mengambil langkah strategis yang tepat untuk meningkatkan kinerja penjualan.
-
-Regresi linier sederhana dapat menangkap hubungan linier antara dua variabel tersebut secara efektif dan memberikan interpretasi yang mudah dipahami. Dengan data terbatas hanya pada tinggi dan berat, regresi merupakan pilihan yang tepat karena mampu menghasilkan model prediktif dengan akurasi yang baik dan tidak memerlukan fitur tambahan atau algoritma yang lebih kompleks.
-  ## Kelebihan Regresi:
-      Sederhana dan mudah diimplementasikan: Regresi linier mudah dipahami dan digunakan.
-      Interprestasi yang jelas: Hasil regresi memberikan informasi yang jelas tentang hubungan antara variabel independen dan dependen.
-      Performa baik untuk data linier: Bekerja baik jika ada hubungan linier antara variabel.
-  ## Kekurangan Regresi:
-
-      Sensitif terhadap outlier: Regresi sangat terpengaruh oleh data outlier yang dapat menyebabkan model menjadi tidak akurat.
-      Keterbatasan untuk data non-linier: Regresi linier tidak mampu menangani hubungan non-linier tanpa penyesuaian khusus.
-      Multikolinearitas: Jika fitur saling berkorelasi, hasil regresi bisa menjadi tidak stabil.
+Contoh Hyperparameter Tuning untuk XGBoost:
+Mencoba berbagai nilai untuk n_estimators (misalnya 100, 200, 300).
+Menyesuaikan learning_rate (misalnya 0.01, 0.1, 0.2).
+Mengatur kedalaman maksimal dari pohon (max_depth), misalnya 3, 5, 7.
+Mencoba subsample (misalnya 0.6, 0.8, 1.0) untuk mengurangi overfitting.
 # Evaluation
-* Jawaban dari goals
-* ![image](https://github.com/user-attachments/assets/0fda6e0f-b4f2-4731-bc97-f58b01facb24)
+Setelah membangun beberapa model, yaitu Linear Regression dan XGBoost Regressor, langkah berikutnya adalah mengevaluasi performa masing-masing model untuk menentukan mana yang paling sesuai dalam menjawab problem statement dan apakah model tersebut telah mencapai goals yang diharapkan.
 
-Memahami Faktor yang Mempengaruhi Penjualan:
+1. Evaluasi Model: Linear Regression
+Pada bagian sebelumnya, kita telah menggunakan model Linear Regression, dan hasil evaluasinya adalah:
 
-Melalui analisis data, model regresi XGBoost menunjukkan bahwa kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang memiliki pengaruh signifikan terhadap total penjualan. Misalnya, model dapat mengidentifikasi bahwa jenis produk tertentu lebih populer di lokasi cabang tertentu, dan bahwa pelanggan dengan profil tertentu cenderung melakukan pembelian dengan nilai yang lebih tinggi.
-Pengembangan Model Prediksi:
+Mean Squared Error (MSE): 5.96e-27 (hampir nol, yang berarti model ini sangat baik dalam memprediksi nilai target pada data uji).
+R-squared (R²): 1.0 (menunjukkan bahwa model mampu menjelaskan 100% variansi dalam data, yang merupakan nilai ideal).
+Analisis:
+Nilai R-squared yang sempurna (1.0) menunjukkan bahwa Linear Regression memberikan hasil yang sangat baik pada data uji, namun ini juga bisa menandakan overfitting jika performanya terlalu sempurna. Model yang terlalu overfitted dapat bekerja dengan sangat baik pada data uji, tetapi kurang optimal pada data baru.
 
-Dengan melatih model regresi menggunakan dataset yang mencakup variabel-variabel kunci, kami berhasil membangun model yang dapat memprediksi total penjualan dengan akurasi tinggi. Hasil evaluasi menunjukkan Mean Squared Error (MSE) yang rendah dan R-squared yang sangat tinggi (0.9999), yang menunjukkan kemampuan model dalam menjelaskan variabilitas penjualan.
-Pengambilan Keputusan Berbasis Data:
+2. Evaluasi Model: XGBoost Regressor
+Setelah melakukan hyperparameter tuning menggunakan GridSearchCV, kita melatih kembali model XGBoost Regressor dengan parameter terbaik yang ditemukan. Hasil evaluasinya adalah:
 
-Hasil dari model prediksi memberikan dasar yang kuat bagi manajemen untuk membuat keputusan strategis. Misalnya, jika model menunjukkan bahwa penjualan meningkat pada jenis pelanggan tertentu selama periode tertentu, perusahaan dapat memfokuskan upaya pemasaran dan penjualan kepada segmen tersebut untuk memaksimalkan pendapatan.
-Optimisasi Strategi Pemasaran:
+Mean Squared Error (MSE): 10.015
+R-squared (R²): 0.9998
+Analisis:
+Meskipun XGBoost memiliki MSE yang lebih besar dibandingkan Linear Regression, R-squared model XGBoost mendekati nilai sempurna (0.9998), menunjukkan bahwa model ini juga memiliki kemampuan prediksi yang sangat baik dan hampir setara dengan Linear Regression.
 
-Dengan wawasan yang diperoleh dari model prediksi, perusahaan dapat mengoptimalkan strategi pemasaran mereka. Misalnya, jika analisis menunjukkan bahwa jenis produk A lebih banyak dibeli oleh pelanggan B di cabang C, perusahaan dapat merancang promosi khusus atau penawaran untuk menarik lebih banyak pelanggan di segmen ini. Selain itu, hasil model dapat digunakan untuk merencanakan stok produk secara lebih efektif, menghindari kehabisan stok atau overstocking.
+Namun, XGBoost biasanya lebih robust terhadap data yang memiliki non-linearitas, sehingga model ini bisa lebih baik dalam menangani data baru yang lebih kompleks dibanding Linear Regression.
+
+Komparasi Model
+Model	Mean Squared Error (MSE)	R-squared (R²)
+Linear Regression	5.96e-27	1.0
+XGBoost Regressor	10.015	0.9998
+Linear Regression memiliki MSE yang sangat kecil dan R-squared yang sempurna, namun ini bisa menjadi indikasi overfitting, terutama jika data yang dilatih bersifat sangat linear atau terlalu sederhana.
+XGBoost memiliki MSE yang sedikit lebih besar dan R-squared yang hampir sempurna, namun model ini lebih fleksibel dalam menangani data yang lebih kompleks.
+Kesimpulan dari Komparasi:
+
+XGBoost Regressor mungkin adalah pilihan yang lebih baik jika data nyata memiliki kompleksitas yang lebih tinggi dan tidak selalu mengikuti pola linear.
+Sementara Linear Regression lebih sederhana dan memberikan hasil yang baik, model ini mungkin tidak bertahan dengan baik pada data yang lebih bervariasi.
+Melalui evaluasi model Linear Regression dan XGBoost Regressor, kita dapat menjawab problem statement ini dengan baik. Kedua model menunjukkan kemampuan prediktif yang tinggi dengan nilai R-squared yang mendekati sempurna. Ini berarti bahwa variabel-variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang memberikan pengaruh yang signifikan terhadap total penjualan dan mampu dijelaskan dengan baik oleh model yang dibangun.
+
+Hasil Evaluasi Model:
+Linear Regression memberikan hasil evaluasi dengan R-squared sebesar 1.0, yang menunjukkan bahwa model ini dapat menjelaskan 100% variasi dalam total penjualan.
+XGBoost Regressor dengan R-squared sebesar 0.9998 juga hampir sempurna dan lebih robust terhadap kemungkinan variasi dalam data.
 
 ![image](https://github.com/user-attachments/assets/895830b7-f639-4605-b288-5a95d3be3f37)
 
