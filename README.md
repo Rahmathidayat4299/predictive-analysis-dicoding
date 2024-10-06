@@ -63,23 +63,23 @@ Penjelasan mengenai setiap fitur dalam dataset:
 
 
 # Variabel-variabel pada Data ialah :
-Invoice ID: String (atau kategori) - Merupakan identifikasi unik untuk setiap transaksi dan biasanya dalam format teks.<br>
-Branch: Kategori - Menunjukkan cabang tempat transaksi dilakukan, biasanya berupa huruf (misalnya, A, B, C).<br>
-City: Kategori - Menunjukkan nama kota tempat cabang berlokasi, berupa teks.<br>
-Customer type: Kategori - Mengindikasikan tipe pelanggan, biasanya berupa kategori seperti "Member" atau "Normal".<br>
-Gender: Kategori - Menunjukkan jenis kelamin pelanggan, biasanya berupa "Male" atau "Female".<br>
-Product line: Kategori - Mengindikasikan kategori produk yang dibeli, berupa teks (misalnya, "Health and beauty").<br>
-Unit price: Float - Menunjukkan harga per unit produk, berupa angka desimal.<br>
-Quantity: Integer - Menunjukkan jumlah produk yang dibeli, berupa angka bulat.<br>
-Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
-Total: Float - Menunjukkan total harga setelah pajak, berupa angka desimal.<br>
-Date: Tanggal - Menunjukkan tanggal transaksi, biasanya dalam format teks yang dapat diubah menjadi tipe tanggal.<br>
-Time: Waktu - Menunjukkan waktu transaksi, biasanya dalam format teks (jam)<br>
-Payment: Kategori - Menunjukkan metode pembayaran yang digunakan (misalnya, "Ewallet", "Cash").<br>
-cogs: Float - Menunjukkan biaya barang yang terjual (Cost of Goods Sold), berupa angka desimal.<br>
-gross margin percentage: Float - Menunjukkan persentase margin kotor, berupa angka desimal.<br>
-gross income: Float - Menunjukkan total pendapatan kotor, berupa angka desimal.<br>
-Rating: Float - Menunjukkan rating yang diberikan oleh pelanggan, biasanya dalam skala 1-10, berupa angka desimal.<br>
+*Invoice ID: String (atau kategori) - Merupakan identifikasi unik untuk setiap transaksi dan biasanya dalam format teks.<br>
+*Branch: Kategori - Menunjukkan cabang tempat transaksi dilakukan, biasanya berupa huruf (misalnya, A, B, C).<br>
+* City: Kategori - Menunjukkan nama kota tempat cabang berlokasi, berupa teks.<br>
+* Customer type: Kategori - Mengindikasikan tipe pelanggan, biasanya berupa kategori seperti "Member" atau "Normal".<br>
+* Gender: Kategori - Menunjukkan jenis kelamin pelanggan, biasanya berupa "Male" atau "Female".<br>
+* Product line: Kategori - Mengindikasikan kategori produk yang dibeli, berupa teks (misalnya, "Health and beauty").<br>
+* Unit price: Float - Menunjukkan harga per unit produk, berupa angka desimal.<br>
+* Quantity: Integer - Menunjukkan jumlah produk yang dibeli, berupa angka bulat.<br>
+ *Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
+* Total: Float - Menunjukkan total harga setelah pajak, berupa angka desimal.<br>
+* Date: Tanggal - Menunjukkan tanggal transaksi, biasanya dalam format teks yang dapat diubah menjadi tipe tanggal.<br>
+* Time: Waktu - Menunjukkan waktu transaksi, biasanya dalam format teks (jam)<br>
+* Payment: Kategori - Menunjukkan metode pembayaran yang digunakan (misalnya, "Ewallet", "Cash").<br>
+* cogs: Float - Menunjukkan biaya barang yang terjual (Cost of Goods Sold), berupa angka desimal.<br>
+* gross margin percentage: Float - Menunjukkan persentase margin kotor, berupa angka desimal.<br>
+* gross income: Float - Menunjukkan total pendapatan kotor, berupa angka desimal.<br>
+* Rating: Float - Menunjukkan rating yang diberikan oleh pelanggan, biasanya dalam skala 1-10, berupa angka desimal.<br>
 
 # Data Preparation
 1. Cek Nilai Null dan Duplikat
