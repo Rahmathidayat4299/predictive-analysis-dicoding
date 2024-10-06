@@ -8,9 +8,8 @@ Penggunaan teknik analisis data, seperti regresi dan algoritma machine learning,
 Dengan memanfaatkan data historis penjualan, serta fitur-fitur terkait seperti harga unit, pajak, dan rating produk, penelitian ini bertujuan untuk mengembangkan model prediksi yang dapat mengidentifikasi faktor-faktor yang paling berpengaruh terhadap total penjualan. Hasil dari penelitian ini diharapkan dapat memberikan wawasan yang berharga bagi perusahaan dalam meningkatkan strategi penjualan dan memaksimalkan pendapatan.
 
 # Business Understanding
-     Dalam dunia bisnis yang kompetitif, pemahaman yang mendalam tentang faktor-faktor yang mempengaruhi penjualan sangat penting untuk pengambilan keputusan yang efektif. Total penjualan adalah metrik kunci yang mencerminkan kesehatan finansial perusahaan dan merupakan indikator utama dari pertumbuhan dan keberhasilan bisnis.
-     Untuk meningkatkan performa penjualan, perusahaan perlu memahami perilaku konsumen yang beragam. Dengan menganalisis variabel seperti jenis pelanggan (anggota atau normal), jenis produk yang ditawarkan, dan lokasi cabang, perusahaan dapat mengidentifikasi pola yang dapat memandu strategi pemasaran, pengelolaan inventaris, dan pengembangan produk.
-     Melalui pendekatan berbasis data, perusahaan dapat membangun model prediksi yang tidak hanya memberikan wawasan tentang proyeksi penjualan, tetapi juga membantu dalam merumuskan strategi yang lebih tepat dan responsif terhadap kebutuhan pasar.
+Dalam dunia bisnis yang kompetitif, pemahaman yang mendalam tentang faktor-faktor yang mempengaruhi penjualan sangat penting untuk pengambilan keputusan yang efektif. Total penjualan adalah metrik kunci yang mencerminkan kesehatan finansial perusahaan dan merupakan indikator utama dari pertumbuhan dan keberhasilan bisnis.
+Untuk meningkatkan performa penjualan, perusahaan perlu memahami perilaku konsumen yang beragam. Dengan menganalisis variabel seperti jenis pelanggan (anggota atau normal), jenis produk yang ditawarkan, dan lokasi cabang, perusahaan dapat mengidentifikasi pola yang dapat memandu strategi pemasaran, pengelolaan inventaris, dan pengembangan produk.Melalui pendekatan berbasis data, perusahaan dapat membangun model prediksi yang tidak hanya memberikan wawasan tentang proyeksi penjualan, tetapi juga membantu dalam merumuskan strategi yang lebih tepat dan responsif terhadap kebutuhan pasar.
 
 # Problem Statements
 Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang dapat diselesaikan pada proyek ini:
@@ -18,14 +17,14 @@ bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan 
 
 # Goals
 Tujuan dari Analysis ini ialah
-* Memahami Faktor yang Mempengaruhi Penjualan:
-Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
-* Pengembangan Model Prediksi:
-Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
-* Pengambilan Keputusan Berbasis Data:
-Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
-Optimisasi Strategi Pemasaran:
-Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
+     * Memahami Faktor yang Mempengaruhi Penjualan:
+     Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
+     * Pengembangan Model Prediksi:
+     Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
+     * Pengambilan Keputusan Berbasis Data:
+     Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
+     Optimisasi Strategi Pemasaran:
+     Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
 
 # Data UnderStanding
 1. Jumlah Data (Baris dan Kolom):
