@@ -1,5 +1,5 @@
 # Predictive-analysis-dicoding
-# Domain project ialah keuangan dengan judul Predictive Analysis Prediksi Sales Supermarket
+     Domain project ialah keuangan dengan judul Predictive Analysis Prediksi Sales Supermarket
 # Latar Belakang
 
 Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.
