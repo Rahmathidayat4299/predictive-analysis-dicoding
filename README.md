@@ -43,23 +43,23 @@ https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales .
 4. Uraian Seluruh Fitur (Kolom) Pada Data:
 Penjelasan mengenai setiap fitur dalam dataset:
 
-Invoice ID: Nomor identifikasi unik untuk setiap transaksi.
-Branch (Cabang): Cabang toko di mana penjualan terjadi (misalnya: 'A', 'B', 'C').
-City (Kota): Kota di mana cabang toko tersebut berada (contoh: 'Yangon', 'Naypyitaw').
-Customer type (Jenis Pelanggan): Jenis pelanggan, yaitu Member (Anggota) atau Normal (Non-anggota).
-Gender (Jenis Kelamin): Jenis kelamin pelanggan (misalnya: 'Male' untuk laki-laki dan 'Female' untuk perempuan).
-Product line (Lini Produk): Kategori produk yang dijual (contoh: 'Health and beauty', 'Fashion accessories').
-Unit price (Harga Satuan): Harga per satuan produk yang dibeli.
-Quantity (Jumlah): Jumlah unit produk yang dibeli dalam satu transaksi.
-Tax 5% (Pajak 5%): Pajak yang diterapkan pada pembelian dengan tarif 5%.
-Total: Jumlah total yang dibayarkan, termasuk pajak.
-Date (Tanggal): Tanggal terjadinya transaksi.
-Time (Waktu): Waktu terjadinya transaksi.
-Payment (Pembayaran): Metode pembayaran yang digunakan (misalnya: 'Cash' untuk tunai, 'Credit card' untuk kartu kredit, atau 'Ewallet').
-COGS (Cost of Goods Sold / Biaya Produksi): Biaya langsung yang dapat dikaitkan dengan produksi barang yang dijual.
-Gross margin percentage (Persentase Margin Kotor): Persentase dari total pendapatan penjualan yang dipertahankan perusahaan setelah mengeluarkan biaya langsung yang terkait dengan produksi barang. (Nilai ini tampaknya konstan pada 4.761905 dalam dataset ini).
-Gross income (Pendapatan Kotor): Pendapatan yang diperoleh dari penjualan, dihitung sebagai Total - COGS.
-Rating: Peringkat yang diberikan pelanggan untuk transaksi tersebut, mungkin dalam skala 1 hingga 10.
+* Invoice ID: Nomor identifikasi unik untuk setiap transaksi.
+* Branch (Cabang): Cabang toko di mana penjualan terjadi (misalnya: 'A', 'B', 'C').
+* City (Kota): Kota di mana cabang toko tersebut berada (contoh: 'Yangon', 'Naypyitaw').
+* Customer type (Jenis Pelanggan): Jenis pelanggan, yaitu Member (Anggota) atau Normal (Non-anggota).
+* Gender (Jenis Kelamin): Jenis kelamin pelanggan (misalnya: 'Male' untuk laki-laki dan 'Female' untuk perempuan).
+* Product line (Lini Produk): Kategori produk yang dijual (contoh: 'Health and beauty', 'Fashion accessories').
+* Unit price (Harga Satuan): Harga per satuan produk yang dibeli.
+* Quantity (Jumlah): Jumlah unit produk yang dibeli dalam satu transaksi.
+* Tax 5% (Pajak 5%): Pajak yang diterapkan pada pembelian dengan tarif 5%.
+* Total: Jumlah total yang dibayarkan, termasuk pajak.
+* Date (Tanggal): Tanggal terjadinya transaksi.
+* Time (Waktu): Waktu terjadinya transaksi.
+* Payment (Pembayaran): Metode pembayaran yang digunakan (misalnya: 'Cash' untuk tunai, 'Credit card' untuk kartu kredit, atau 'Ewallet').
+* COGS (Cost of Goods Sold / Biaya Produksi): Biaya langsung yang dapat dikaitkan dengan produksi barang yang dijual.
+* Gross margin percentage (Persentase Margin Kotor): Persentase dari total pendapatan penjualan yang dipertahankan perusahaan setelah mengeluarkan biaya langsung yang terkait dengan produksi barang. (Nilai ini tampaknya konstan pada 4.761905 dalam dataset ini).
+* Gross income (Pendapatan Kotor): Pendapatan yang diperoleh dari penjualan, dihitung sebagai Total - COGS.
+* Rating: Peringkat yang diberikan pelanggan untuk transaksi tersebut, mungkin dalam skala 1 hingga 10.
 
 
 # Variabel-variabel pada Data ialah :
