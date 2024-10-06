@@ -17,14 +17,14 @@ bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan 
 
 # Goals
 Tujuan dari Analysis ini ialah
-     *Memahami Faktor yang Mempengaruhi Penjualan:
-     Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
-     *Pengembangan Model Prediksi:
-     Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
-     *Pengambilan Keputusan Berbasis Data:
-     Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
-     Optimisasi Strategi Pemasaran:
-     Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
+* Memahami Faktor yang Mempengaruhi Penjualan:
+  Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
+* Pengembangan Model Prediksi:
+  Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
+* Pengambilan Keputusan Berbasis Data:
+  Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
+ * Optimisasi Strategi Pemasaran:
+  Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
 
 # Data UnderStanding
 1. Jumlah Data (Baris dan Kolom):
