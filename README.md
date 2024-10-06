@@ -2,7 +2,7 @@
      Domain project ialah keuangan dengan judul Predictive Analysis Prediksi Sales Supermarket
 # Latar Belakang
 
-     Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.
+     Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di           pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah              kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.
      
      Dalam konteks ini, total penjualan dipengaruhi oleh berbagai faktor, termasuk karakteristik pelanggan, jenis produk yang dijual, dan lokasi cabang. Jenis pelanggan, apakah mereka anggota atau normal, dapat memberikan wawasan tentang perilaku belanja yang berbeda. Jenis produk juga memainkan peran penting, karena berbagai kategori produk memiliki daya tarik dan permintaan yang bervariasi di kalangan konsumen. Selain itu, lokasi cabang dapat memengaruhi aksesibilitas produk dan preferensi lokal, yang semuanya dapat berdampak pada volume penjualan.
      
