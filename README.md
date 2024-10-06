@@ -71,7 +71,7 @@ Penjelasan mengenai setiap fitur dalam dataset:
 * Product line: Kategori - Mengindikasikan kategori produk yang dibeli, berupa teks (misalnya, "Health and beauty").<br>
 * Unit price: Float - Menunjukkan harga per unit produk, berupa angka desimal.<br>
 * Quantity: Integer - Menunjukkan jumlah produk yang dibeli, berupa angka bulat.<br>
- *Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
+* Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
 * Total: Float - Menunjukkan total harga setelah pajak, berupa angka desimal.<br>
 * Date: Tanggal - Menunjukkan tanggal transaksi, biasanya dalam format teks yang dapat diubah menjadi tipe tanggal.<br>
 * Time: Waktu - Menunjukkan waktu transaksi, biasanya dalam format teks (jam)<br>
