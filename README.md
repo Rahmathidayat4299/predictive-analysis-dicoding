@@ -17,6 +17,7 @@ bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan 
 
 # Goals
      Tujuan dari Analysis ini ialah
+```bash
 * Memahami Faktor yang Mempengaruhi Penjualan:
   Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
 * Pengembangan Model Prediksi:
@@ -25,7 +26,7 @@ bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan 
   Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
  * Optimisasi Strategi Pemasaran:
   Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
-
+```
 # Data UnderStanding
 1. Jumlah Data (Baris dan Kolom):
 Baris (Jumlah data): Dataset ini menampilkan nomor baris dari 0 hingga 999, yang menunjukkan bahwa ada 1.000 baris (data point).
