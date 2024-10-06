@@ -16,7 +16,7 @@ Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang d
 bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan (Total) dari kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang?
 
 # Goals
-Tujuan dari Analysis ini ialah
+     Tujuan dari Analysis ini ialah
 * Memahami Faktor yang Mempengaruhi Penjualan:
   Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
 * Pengembangan Model Prediksi:
