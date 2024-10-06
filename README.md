@@ -2,13 +2,13 @@
      Domain project ialah keuangan dengan judul Predictive Analysis Prediksi Sales Supermarket
 # Latar Belakang
 
-Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.
-
-Dalam konteks ini, total penjualan dipengaruhi oleh berbagai faktor, termasuk karakteristik pelanggan, jenis produk yang dijual, dan lokasi cabang. Jenis pelanggan, apakah mereka anggota atau normal, dapat memberikan wawasan tentang perilaku belanja yang berbeda. Jenis produk juga memainkan peran penting, karena berbagai kategori produk memiliki daya tarik dan permintaan yang bervariasi di kalangan konsumen. Selain itu, lokasi cabang dapat memengaruhi aksesibilitas produk dan preferensi lokal, yang semuanya dapat berdampak pada volume penjualan.
-
-Penggunaan teknik analisis data, seperti regresi dan algoritma machine learning, memberikan peluang untuk menggali pola dan hubungan dalam data yang sebelumnya tidak terlihat. Model prediksi yang akurat tidak hanya membantu perusahaan dalam merencanakan strategi penjualan, tetapi juga dalam pengambilan keputusan yang lebih baik terkait dengan stok, pemasaran, dan pengembangan produk.
-
-Dengan memanfaatkan data historis penjualan, serta fitur-fitur terkait seperti harga unit, pajak, dan rating produk, penelitian ini bertujuan untuk mengembangkan model prediksi yang dapat mengidentifikasi faktor-faktor yang paling berpengaruh terhadap total penjualan. Hasil dari penelitian ini diharapkan dapat memberikan wawasan yang berharga bagi perusahaan dalam meningkatkan strategi penjualan dan memaksimalkan pendapatan.
+     Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.
+     
+     Dalam konteks ini, total penjualan dipengaruhi oleh berbagai faktor, termasuk karakteristik pelanggan, jenis produk yang dijual, dan lokasi cabang. Jenis pelanggan, apakah mereka anggota atau normal, dapat memberikan wawasan tentang perilaku belanja yang berbeda. Jenis produk juga memainkan peran penting, karena berbagai kategori produk memiliki daya tarik dan permintaan yang bervariasi di kalangan konsumen. Selain itu, lokasi cabang dapat memengaruhi aksesibilitas produk dan preferensi lokal, yang semuanya dapat berdampak pada volume penjualan.
+     
+     Penggunaan teknik analisis data, seperti regresi dan algoritma machine learning, memberikan peluang untuk menggali pola dan hubungan dalam data yang sebelumnya tidak terlihat. Model prediksi yang akurat tidak hanya membantu perusahaan dalam merencanakan strategi penjualan, tetapi juga dalam pengambilan keputusan yang lebih baik terkait dengan stok, pemasaran, dan pengembangan produk.
+     
+     Dengan memanfaatkan data historis penjualan, serta fitur-fitur terkait seperti harga unit, pajak, dan rating produk, penelitian ini bertujuan untuk mengembangkan model prediksi yang dapat mengidentifikasi faktor-faktor yang paling berpengaruh terhadap total penjualan. Hasil dari penelitian ini diharapkan dapat memberikan wawasan yang berharga bagi perusahaan dalam meningkatkan strategi penjualan dan memaksimalkan pendapatan.
 
 # Business Understanding
 Dalam dunia bisnis yang kompetitif, pemahaman yang mendalam tentang faktor-faktor yang mempengaruhi penjualan sangat penting untuk pengambilan keputusan yang efektif. Total penjualan adalah metrik kunci yang mencerminkan kesehatan finansial perusahaan dan merupakan indikator utama dari pertumbuhan dan keberhasilan bisnis.
