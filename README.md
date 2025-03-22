@@ -123,4 +123,57 @@ Optimisasi Strategi Pemasaran:
 Dengan wawasan yang diperoleh dari model prediksi, perusahaan dapat mengoptimalkan strategi pemasaran mereka. Misalnya, jika analisis menunjukkan bahwa jenis produk A lebih banyak dibeli oleh pelanggan B di cabang C, perusahaan dapat merancang promosi khusus atau penawaran untuk menarik lebih banyak pelanggan di segmen ini. Selain itu, hasil model dapat digunakan untuk merencanakan stok produk secara lebih efektif, menghindari kehabisan stok atau overstocking.
 
 ![image](https://github.com/user-attachments/assets/895830b7-f639-4605-b288-5a95d3be3f37)
+# Evaluasi Model: MAE dan RMSE (Rubrik)
+
+## Mean Absolute Error (MAE)
+
+**Mean Absolute Error (MAE)** adalah metrik yang digunakan untuk mengukur rata-rata besar kesalahan dalam serangkaian prediksi, tanpa memperhatikan arah kesalahan tersebut. MAE adalah rata-rata dari perbedaan absolut antara prediksi dan observasi aktual, di mana semua perbedaan individu memiliki bobot yang sama.
+
+### **Formula:**
+\[
+\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} | y_i - \hat{y}_i |
+\]
+
+Di mana:
+- \( y_i \) adalah nilai aktual.
+- \( \hat{y}_i \) adalah nilai prediksi.
+- \( n \) adalah jumlah observasi.
+
+---
+
+## Root Mean Squared Error (RMSE)
+
+**Root Mean Squared Error (RMSE)** adalah metrik yang mengukur akar kuadrat dari rata-rata perbedaan kuadrat antara prediksi dan observasi aktual. RMSE memberikan bobot yang lebih besar pada kesalahan besar, sehingga lebih sensitif terhadap outlier dibandingkan MAE.
+
+### **Formula:**
+\[
+\text{RMSE} = \sqrt{ \frac{1}{n} \sum_{i=1}^{n} ( y_i - \hat{y}_i )^2 }
+\]
+
+Di mana:
+- \( y_i \) adalah nilai aktual.
+- \( \hat{y}_i \) adalah nilai prediksi.
+- \( n \) adalah jumlah observasi.
+
+---
+
+## Implementasi dalam Python
+
+Kode berikut menghitung **MAE** dan **RMSE** menggunakan **scikit-learn** dan **NumPy**:
+
+```python
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+import numpy as np
+
+# Hitung MAE
+mae = mean_absolute_error(y_test, y_pred)
+
+# Hitung RMSE
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+
+# Cetak hasil
+print(f"Mean Absolute Error (MAE): {mae}")
+print(f"Root Mean Squared Error (RMSE): {rmse}")
+
 
