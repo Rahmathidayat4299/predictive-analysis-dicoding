@@ -1,110 +1,161 @@
 # Predictive-analysis-dicoding
-# Domain project ialah keuangan dengan judul Predictive Analysis Prediksi Sales Supermarket
+     Domain project ialah keuangan dengan judul Predictive Analysis Prediksi Sales Supermarket
 # Latar Belakang
 
-Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.
-
-Dalam konteks ini, total penjualan dipengaruhi oleh berbagai faktor, termasuk karakteristik pelanggan, jenis produk yang dijual, dan lokasi cabang. Jenis pelanggan, apakah mereka anggota atau normal, dapat memberikan wawasan tentang perilaku belanja yang berbeda. Jenis produk juga memainkan peran penting, karena berbagai kategori produk memiliki daya tarik dan permintaan yang bervariasi di kalangan konsumen. Selain itu, lokasi cabang dapat memengaruhi aksesibilitas produk dan preferensi lokal, yang semuanya dapat berdampak pada volume penjualan.
-
-Penggunaan teknik analisis data, seperti regresi dan algoritma machine learning, memberikan peluang untuk menggali pola dan hubungan dalam data yang sebelumnya tidak terlihat. Model prediksi yang akurat tidak hanya membantu perusahaan dalam merencanakan strategi penjualan, tetapi juga dalam pengambilan keputusan yang lebih baik terkait dengan stok, pemasaran, dan pengembangan produk.
-
+Di era digital saat ini, perusahaan menghadapi tantangan yang semakin kompleks dalam memahami dan memprediksi perilaku konsumen. Dengan meningkatnya persaingan di           pasar, penting bagi bisnis untuk dapat membuat keputusan yang tepat berdasarkan analisis data. Salah satu aspek kritis dari strategi bisnis yang efektif adalah              kemampuan untuk memprediksi total penjualan, yang merupakan indikator utama keberhasilan finansial suatu perusahaan.    
+Dalam konteks ini, total penjualan dipengaruhi oleh berbagai faktor, termasuk karakteristik pelanggan, jenis produk yang dijual, dan lokasi cabang. Jenis pelanggan, apakah mereka anggota atau normal, dapat memberikan wawasan tentang perilaku belanja yang berbeda. Jenis produk juga memainkan peran penting, karena berbagai kategori produk memiliki daya tarik dan permintaan yang bervariasi di kalangan konsumen. Selain itu, lokasi cabang dapat memengaruhi aksesibilitas produk dan preferensi lokal, yang semuanya dapat berdampak pada volume penjualan.    
+Penggunaan teknik analisis data, seperti regresi dan algoritma machine learning, memberikan peluang untuk menggali pola dan hubungan dalam data yang sebelumnya tidak terlihat. Model prediksi yang akurat tidak hanya membantu perusahaan dalam merencanakan strategi penjualan, tetapi juga dalam pengambilan keputusan yang lebih baik terkait dengan stok, pemasaran, dan pengembangan produk.    
 Dengan memanfaatkan data historis penjualan, serta fitur-fitur terkait seperti harga unit, pajak, dan rating produk, penelitian ini bertujuan untuk mengembangkan model prediksi yang dapat mengidentifikasi faktor-faktor yang paling berpengaruh terhadap total penjualan. Hasil dari penelitian ini diharapkan dapat memberikan wawasan yang berharga bagi perusahaan dalam meningkatkan strategi penjualan dan memaksimalkan pendapatan.
 
 # Business Understanding
 Dalam dunia bisnis yang kompetitif, pemahaman yang mendalam tentang faktor-faktor yang mempengaruhi penjualan sangat penting untuk pengambilan keputusan yang efektif. Total penjualan adalah metrik kunci yang mencerminkan kesehatan finansial perusahaan dan merupakan indikator utama dari pertumbuhan dan keberhasilan bisnis.
-Untuk meningkatkan performa penjualan, perusahaan perlu memahami perilaku konsumen yang beragam. Dengan menganalisis variabel seperti jenis pelanggan (anggota atau normal), jenis produk yang ditawarkan, dan lokasi cabang, perusahaan dapat mengidentifikasi pola yang dapat memandu strategi pemasaran, pengelolaan inventaris, dan pengembangan produk.
-Melalui pendekatan berbasis data, perusahaan dapat membangun model prediksi yang tidak hanya memberikan wawasan tentang proyeksi penjualan, tetapi juga membantu dalam merumuskan strategi yang lebih tepat dan responsif terhadap kebutuhan pasar.
+Untuk meningkatkan performa penjualan, perusahaan perlu memahami perilaku konsumen yang beragam. Dengan menganalisis variabel seperti jenis pelanggan (anggota atau normal), jenis produk yang ditawarkan, dan lokasi cabang, perusahaan dapat mengidentifikasi pola yang dapat memandu strategi pemasaran, pengelolaan inventaris, dan pengembangan produk.Melalui pendekatan berbasis data, perusahaan dapat membangun model prediksi yang tidak hanya memberikan wawasan tentang proyeksi penjualan, tetapi juga membantu dalam merumuskan strategi yang lebih tepat dan responsif terhadap kebutuhan pasar.
 
 # Problem Statements
 Berdasarkan latar belakang di atas, berikut ini merupakan rincian masalah yang dapat diselesaikan pada proyek ini:
 bagaimana hasil dari pertanyaan Bagaimana kita bisa memprediksi total penjualan (Total) dari kombinasi variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang?
 
 # Goals
-Tujuan dari Analysis ini ialah
+     Tujuan dari Analysis ini ialah
+```bash
 * Memahami Faktor yang Mempengaruhi Penjualan:
-Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
+  Mengidentifikasi bagaimana variabel seperti jenis pelanggan, jenis produk, dan lokasi cabang berkontribusi terhadap total penjualan.
 * Pengembangan Model Prediksi:
-Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
+  Membangun dan melatih model yang dapat digunakan untuk memprediksi total penjualan berdasarkan data historis.
 * Pengambilan Keputusan Berbasis Data:
-Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
-Optimisasi Strategi Pemasaran:
-
-Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
-
+  Memberikan insight yang berguna bagi manajemen untuk membuat keputusan yang lebih baik dalam strategi pemasaran dan penjualan.
+ * Optimisasi Strategi Pemasaran:
+  Menggunakan hasil prediksi untuk menyesuaikan strategi penjualan dan pemasaran agar lebih efektif dalam mencapai target penjualan.
+```
 # Data UnderStanding
-source data => https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales
+1. Jumlah Data (Baris dan Kolom):
+Baris (Jumlah data): Dataset ini menampilkan nomor baris dari 0 hingga 999, yang menunjukkan bahwa ada 1.000 baris (data point).
+Kolom: Terdapat 17 kolom dalam dataset ini.
+2. Kondisi Data:
+Data terlihat cukup rapi, tidak ada nilai yang hilang atau tidak wajar dalam tampilan data ini.
+Nilai pada kolom seperti Total, Unit price, dan Quantity tampak konsisten dan realistis.
+Kolom Date dan Time memiliki format yang seragam, di mana tanggal menggunakan format MM/DD/YYYY.
+3. Tautan Sumber Data:
+https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales .
+4. Uraian Seluruh Fitur (Kolom) Pada Data:
+Penjelasan mengenai setiap fitur dalam dataset:
+
+* Invoice ID: Nomor identifikasi unik untuk setiap transaksi.
+* Branch (Cabang): Cabang toko di mana penjualan terjadi (misalnya: 'A', 'B', 'C').
+* City (Kota): Kota di mana cabang toko tersebut berada (contoh: 'Yangon', 'Naypyitaw').
+* Customer type (Jenis Pelanggan): Jenis pelanggan, yaitu Member (Anggota) atau Normal (Non-anggota).
+* Gender (Jenis Kelamin): Jenis kelamin pelanggan (misalnya: 'Male' untuk laki-laki dan 'Female' untuk perempuan).
+* Product line (Lini Produk): Kategori produk yang dijual (contoh: 'Health and beauty', 'Fashion accessories').
+* Unit price (Harga Satuan): Harga per satuan produk yang dibeli.
+* Quantity (Jumlah): Jumlah unit produk yang dibeli dalam satu transaksi.
+* Tax 5% (Pajak 5%): Pajak yang diterapkan pada pembelian dengan tarif 5%.
+* Total: Jumlah total yang dibayarkan, termasuk pajak.
+* Date (Tanggal): Tanggal terjadinya transaksi.
+* Time (Waktu): Waktu terjadinya transaksi.
+* Payment (Pembayaran): Metode pembayaran yang digunakan (misalnya: 'Cash' untuk tunai, 'Credit card' untuk kartu kredit, atau 'Ewallet').
+* COGS (Cost of Goods Sold / Biaya Produksi): Biaya langsung yang dapat dikaitkan dengan produksi barang yang dijual.
+* Gross margin percentage (Persentase Margin Kotor): Persentase dari total pendapatan penjualan yang dipertahankan perusahaan setelah mengeluarkan biaya langsung yang terkait dengan produksi barang. (Nilai ini tampaknya konstan pada 4.761905 dalam dataset ini).
+* Gross income (Pendapatan Kotor): Pendapatan yang diperoleh dari penjualan, dihitung sebagai Total - COGS.
+* Rating: Peringkat yang diberikan pelanggan untuk transaksi tersebut, mungkin dalam skala 1 hingga 10.
+
+
 # Variabel-variabel pada Data ialah :
-Invoice ID: String (atau kategori) - Merupakan identifikasi unik untuk setiap transaksi dan biasanya dalam format teks.<br>
-Branch: Kategori - Menunjukkan cabang tempat transaksi dilakukan, biasanya berupa huruf (misalnya, A, B, C).<br>
-City: Kategori - Menunjukkan nama kota tempat cabang berlokasi, berupa teks.<br>
-Customer type: Kategori - Mengindikasikan tipe pelanggan, biasanya berupa kategori seperti "Member" atau "Normal".<br>
-Gender: Kategori - Menunjukkan jenis kelamin pelanggan, biasanya berupa "Male" atau "Female".<br>
-Product line: Kategori - Mengindikasikan kategori produk yang dibeli, berupa teks (misalnya, "Health and beauty").<br>
-Unit price: Float - Menunjukkan harga per unit produk, berupa angka desimal.<br>
-Quantity: Integer - Menunjukkan jumlah produk yang dibeli, berupa angka bulat.<br>
-Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
-Total: Float - Menunjukkan total harga setelah pajak, berupa angka desimal.<br>
-Date: Tanggal - Menunjukkan tanggal transaksi, biasanya dalam format teks yang dapat diubah menjadi tipe tanggal.<br>
-Time: Waktu - Menunjukkan waktu transaksi, biasanya dalam format teks (jam)<br>
-Payment: Kategori - Menunjukkan metode pembayaran yang digunakan (misalnya, "Ewallet", "Cash").<br>
-cogs: Float - Menunjukkan biaya barang yang terjual (Cost of Goods Sold), berupa angka desimal.<br>
-gross margin percentage: Float - Menunjukkan persentase margin kotor, berupa angka desimal.<br>
-gross income: Float - Menunjukkan total pendapatan kotor, berupa angka desimal.<br>
-Rating: Float - Menunjukkan rating yang diberikan oleh pelanggan, biasanya dalam skala 1-10, berupa angka desimal.<br>
+*Invoice ID: String (atau kategori) - Merupakan identifikasi unik untuk setiap transaksi dan biasanya dalam format teks.<br>
+*Branch: Kategori - Menunjukkan cabang tempat transaksi dilakukan, biasanya berupa huruf (misalnya, A, B, C).<br>
+* City: Kategori - Menunjukkan nama kota tempat cabang berlokasi, berupa teks.<br>
+* Customer type: Kategori - Mengindikasikan tipe pelanggan, biasanya berupa kategori seperti "Member" atau "Normal".<br>
+* Gender: Kategori - Menunjukkan jenis kelamin pelanggan, biasanya berupa "Male" atau "Female".<br>
+* Product line: Kategori - Mengindikasikan kategori produk yang dibeli, berupa teks (misalnya, "Health and beauty").<br>
+* Unit price: Float - Menunjukkan harga per unit produk, berupa angka desimal.<br>
+* Quantity: Integer - Menunjukkan jumlah produk yang dibeli, berupa angka bulat.<br>
+* Tax 5%: Float - Menunjukkan pajak yang dikenakan (5% dari total harga), berupa angka desimal.<br>
+* Total: Float - Menunjukkan total harga setelah pajak, berupa angka desimal.<br>
+* Date: Tanggal - Menunjukkan tanggal transaksi, biasanya dalam format teks yang dapat diubah menjadi tipe tanggal.<br>
+* Time: Waktu - Menunjukkan waktu transaksi, biasanya dalam format teks (jam)<br>
+* Payment: Kategori - Menunjukkan metode pembayaran yang digunakan (misalnya, "Ewallet", "Cash").<br>
+* cogs: Float - Menunjukkan biaya barang yang terjual (Cost of Goods Sold), berupa angka desimal.<br>
+* gross margin percentage: Float - Menunjukkan persentase margin kotor, berupa angka desimal.<br>
+* gross income: Float - Menunjukkan total pendapatan kotor, berupa angka desimal.<br>
+* Rating: Float - Menunjukkan rating yang diberikan oleh pelanggan, biasanya dalam skala 1-10, berupa angka desimal.<br>
 
 # Data Preparation
-  ## Crawling Data
-  Menyiapkan data yang akan di analysis prediksi.
-  ## Cleaning Data
-     Cleaning data pada proses ini data dilakukan pengecekan duplikasi data , data null, dan outlier pada data
-     proses cleaning data ini sangat penting dilakukan karena akan menjadi hasil yang buruk apabila proses ini dilewati
-![image](https://github.com/user-attachments/assets/27e9c67e-a695-4409-8b63-c4e9b5ca6b1d)
-berikut jumlah outlier pada dataset
+1. Cek Nilai Null dan Duplikat
+Tujuan: Untuk memeriksa apakah terdapat nilai kosong (null) atau baris duplikat dalam dataset yang dapat mempengaruhi kualitas data.
+Langkah:
+Menggunakan .isnull().sum() untuk menghitung jumlah nilai null pada setiap kolom.
+Menggunakan .duplicated().sum() untuk menghitung jumlah baris duplikat.
+Hasil: Tidak ditemukan nilai null maupun duplikat dalam dataset, sehingga tidak perlu melakukan imputasi atau penghapusan baris.
+2. Menghitung Statistik Deskriptif
+Tujuan: Untuk memahami distribusi data seperti mean, standar deviasi, dan kuartil dari kolom numerik.
+Langkah:
+Menggunakan .describe() untuk melihat statistik dasar, seperti rata-rata (mean), nilai minimum (min), maksimum (max), dan kuartil (Q1, Q3).
+Hasil: Statistik ini memberikan gambaran umum tentang distribusi nilai pada setiap kolom numerik.
+3. Deteksi dan Penanganan Outlier
 ![image](https://github.com/user-attachments/assets/3dd63248-a440-4bf0-9f77-bfd2b1f1f6b4)
+Tujuan: Untuk mendeteksi data yang berada di luar batas normal atau rentang data yang wajar (outlier).
+Langkah:
+Menentukan numerical columns yang relevan untuk outlier (misalnya, Unit price, Quantity, Total, dan Rating).
+Menghitung Kuartil Pertama (Q1) dan Kuartil Ketiga (Q3) menggunakan .quantile().
+Menghitung Interquartile Range (IQR) dengan rumus IQR = Q3 - Q1.
+Menentukan batas bawah dan batas atas outlier menggunakan rumus Q1 - 1.5 * IQR dan Q3 + 1.5 * IQR.
+Mendeteksi outlier dengan memeriksa apakah ada nilai di bawah batas bawah atau di atas batas atas pada setiap kolom.
+Hasil: Terdeteksi 9 outlier yang kemudian bisa dianalisis lebih lanjut, apakah akan dihapus atau diperbaiki.
+4. Encoding (One-Hot Encoding)
+Tujuan: Mengubah data kategorikal menjadi bentuk numerik agar dapat digunakan dalam model machine learning.
+Langkah:
+Menggunakan One-Hot Encoding dengan fungsi pd.get_dummies() untuk variabel kategorikal, yaitu Customer type, Product line, Branch, City, Gender, dan Payment.
+Parameter drop_first=True digunakan untuk menghindari multikolinearitas dengan membuang salah satu kategori sebagai referensi.
+Hasil: Variabel kategorikal dikonversi menjadi variabel dummy (0 atau 1), dan dataset siap digunakan dalam pemodelan.
+5. Split Data (Pemecahan Data)
+Tujuan: Memisahkan dataset menjadi data latih (training set) dan data uji (test set) untuk memvalidasi performa model.
+Langkah:
+Biasanya menggunakan train_test_split() dari Scikit-Learn untuk membagi dataset menjadi dua bagian.
+Proporsi umum yang digunakan adalah 80% untuk data latih dan 20% untuk data uji.
+Hasil: Dataset terbagi dengan baik sehingga model dapat dilatih pada data latih dan divalidasi pada data uji.
+6. Kesimpulan Data Preparation
+Dataset sudah melalui berbagai tahap persiapan, termasuk pengecekan kualitas data (null dan duplikat), deteksi outlier, encoding variabel kategorikal, dan pembagian dataset untuk pelatihan dan pengujian. Setiap tahap dilakukan untuk memastikan data bersih dan siap digunakan dalam pemodelan machine learning.
+![image](https://github.com/user-attachments/assets/27e9c67e-a695-4409-8b63-c4e9b5ca6b1d)
 
-
-
-
-  ## Standarization Data
+## Standarization Data
      Mengubah skala data agar lebih konsisten
 
 ## Modeling: Regresi
-Dalam proyek ini, model regresi digunakan untuk memprediksi total penjualan berdasarkan kombinasi variabel yang berpengaruh, seperti jenis pelanggan, jenis produk, dan lokasi cabang. Regresi adalah teknik analisis statistik yang memungkinkan kita untuk memahami hubungan antara satu variabel dependen (dalam hal ini, total penjualan) dan satu atau lebih variabel independen (fitur yang mempengaruhi penjualan).
+1. Regresi Linier
+Regresi Linier adalah salah satu algoritma dasar dalam supervised learning yang bertujuan untuk memprediksi variabel target kontinu (numerik) berdasarkan variabel prediktor (fitur). Model ini mengasumsikan adanya hubungan linear antara variabel prediktor (X) dan target (y), dan menghasilkan garis lurus yang mendekati titik-titik data sebaik mungkin.
 
-Mengapa Memilih Regresi?
-Keterhubungan yang Jelas: Regresi sangat berguna ketika ada harapan bahwa variabel independen akan memiliki pengaruh yang signifikan terhadap variabel dependen. Dalam konteks ini, kami percaya bahwa faktor-faktor seperti jenis pelanggan dan jenis produk dapat memengaruhi total penjualan.
+Cara Kerja:
+Regresi linier menghitung koefisien (slope) dan konstanta (intercept) untuk setiap fitur dalam dataset dengan tujuan meminimalkan perbedaan antara prediksi model dan nilai aktual. 
+Parameter Utama:
+fit_intercept: Menentukan apakah model harus menghitung intercept atau tidak. Jika False, maka garis akan melalui titik asal.
+normalize: Menentukan apakah input harus dinormalisasi sebelum melakukan regresi.
+n_jobs: Menentukan jumlah thread yang digunakan untuk komputasi, default adalah None, yang berarti hanya menggunakan satu thread.
 
-Prediksi Nilai Kontinu: Total penjualan adalah variabel kontinu yang dapat diprediksi dengan baik menggunakan model regresi. Ini memungkinkan perusahaan untuk meramalkan penjualan di masa depan berdasarkan faktor-faktor yang telah dianalisis.
+2. XGBoost Regressor
+XGBoost (Extreme Gradient Boosting) adalah algoritma ensemble yang sangat populer dalam kompetisi data science. Ini menggunakan teknik boosting yang bertujuan untuk meningkatkan performa model dengan membangun model regresi atau klasifikasi secara bertahap, di mana setiap model mencoba memperbaiki kesalahan dari model sebelumnya.
 
-Interpretabilitas: Model regresi memberikan koefisien untuk setiap fitur, yang memungkinkan analisis mendalam tentang seberapa besar setiap faktor memengaruhi total penjualan. Ini memberikan wawasan yang dapat diterapkan dalam pengambilan keputusan bisnis.
+Cara Kerja:
+Boosting: XGBoost menggabungkan beberapa model keputusan (decision tree) secara bertahap. Setiap model baru fokus pada memperbaiki kesalahan model sebelumnya dengan menambahkan bobot lebih pada observasi yang sulit diprediksi.
+Gradient Descent: Algoritma ini menggunakan gradient descent untuk mengoptimalkan fungsi loss dan secara bertahap mengurangi error dari model.
+Regularisasi: XGBoost menggunakan regularisasi L1 (Lasso) dan L2 (Ridge) untuk mengurangi risiko overfitting dengan menghukum model yang terlalu kompleks.
+Parameter Utama:
+n_estimators: Jumlah pohon keputusan yang dibangun secara bertahap.
+learning_rate: Mengontrol ukuran langkah yang diambil dalam setiap iterasi boosting. Nilai yang lebih kecil menghasilkan proses yang lebih lambat tetapi lebih stabil.
+max_depth: Kedalaman maksimum pohon keputusan. Nilai yang lebih besar memungkinkan pohon menjadi lebih kompleks.
+objective: Fungsi loss yang akan dioptimalkan. Dalam kasus regresi, kita menggunakan 'reg:squarederror', yang berarti meminimalkan mean squared error.
+random_state: Seed yang digunakan untuk pengacakan, memastikan hasil yang dapat direproduksi.
+subsample: Persentase sampel data yang digunakan untuk membangun setiap pohon. Nilai yang lebih rendah dapat membantu mengurangi overfitting.
+3. Optimasi Hyperparameter (Hyperparameter Tuning)
+Setelah membangun model, optimasi hyperparameter sangat penting untuk meningkatkan performa model. Hyperparameter adalah parameter yang tidak dipelajari langsung dari data, melainkan harus ditentukan sebelum pelatihan. Proses tuning melibatkan mencoba beberapa kombinasi nilai hyperparameter untuk menemukan pengaturan terbaik.
 
-Jenis Regresi yang Digunakan
-Regresi Linier: Digunakan untuk model dasar yang memberikan gambaran awal tentang hubungan antara variabel. Ini berguna untuk memahami pola umum dalam data.
+Langkah-Langkah Hyperparameter Tuning:
+Grid Search: Mencoba semua kombinasi dari daftar nilai hyperparameter yang telah didefinisikan sebelumnya.
+![image](https://github.com/user-attachments/assets/706a89de-2bee-40eb-8754-f87c84c3f618)
 
-Regresi XGBoost: Model ini diterapkan setelah pengujian regresi linier untuk mendapatkan hasil yang lebih akurat dan mempertimbangkan interaksi antara fitur. XGBoost adalah algoritma boosting yang dikenal karena kemampuannya dalam menangani kompleksitas data dan memberikan prediksi yang lebih baik.
-
-Proses Modeling
-Pemisahan Data: Dataset dibagi menjadi dua bagian: data pelatihan dan data pengujian. Model dilatih menggunakan data pelatihan dan dievaluasi menggunakan data pengujian.
-
-Pelatihan Model: Model regresi dilatih dengan menggunakan variabel independen untuk memprediksi total penjualan.
-
-Evaluasi Model: Model dievaluasi dengan metrik seperti Mean Squared Error (MSE), Mean Absolute Error (MAE), dan R-squared untuk mengukur kinerja model.
-
-Hyperparameter Tuning: Untuk meningkatkan performa model, hyperparameter tuning dilakukan menggunakan teknik seperti Grid Search untuk menemukan kombinasi parameter terbaik.
-
-Hasil
-Model regresi XGBoost menunjukkan hasil yang sangat baik dengan nilai R-squared mendekati 1, menunjukkan bahwa model mampu menjelaskan hampir semua variabilitas dalam data. Dengan menggunakan model ini, perusahaan dapat membuat proyeksi penjualan yang lebih akurat dan mengambil langkah strategis yang tepat untuk meningkatkan kinerja penjualan.
-
-Regresi linier sederhana dapat menangkap hubungan linier antara dua variabel tersebut secara efektif dan memberikan interpretasi yang mudah dipahami. Dengan data terbatas hanya pada tinggi dan berat, regresi merupakan pilihan yang tepat karena mampu menghasilkan model prediktif dengan akurasi yang baik dan tidak memerlukan fitur tambahan atau algoritma yang lebih kompleks.
-  ## Kelebihan Regresi:
-      Sederhana dan mudah diimplementasikan: Regresi linier mudah dipahami dan digunakan.
-      Interprestasi yang jelas: Hasil regresi memberikan informasi yang jelas tentang hubungan antara variabel independen dan dependen.
-      Performa baik untuk data linier: Bekerja baik jika ada hubungan linier antara variabel.
-  ## Kekurangan Regresi:
-
-      Sensitif terhadap outlier: Regresi sangat terpengaruh oleh data outlier yang dapat menyebabkan model menjadi tidak akurat.
-      Keterbatasan untuk data non-linier: Regresi linier tidak mampu menangani hubungan non-linier tanpa penyesuaian khusus.
-      Multikolinearitas: Jika fitur saling berkorelasi, hasil regresi bisa menjadi tidak stabil.
+Contoh Hyperparameter Tuning untuk XGBoost:
+Mencoba berbagai nilai untuk n_estimators (misalnya 100, 200, 300).
+Menyesuaikan learning_rate (misalnya 0.01, 0.1, 0.2).
+Mengatur kedalaman maksimal dari pohon (max_depth), misalnya 3, 5, 7.
+Mencoba subsample (misalnya 0.6, 0.8, 1.0) untuk mengurangi overfitting.
 # Evaluation
 * Jawaban dari goals
 * ![image](https://github.com/user-attachments/assets/0fda6e0f-b4f2-4731-bc97-f58b01facb24)
