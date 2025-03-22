@@ -226,5 +226,7 @@ rmse = np.sqrt(mse)
 # Cetak hasil
 print(f"Mean Absolute Error (MAE): {mae}")
 print(f"Root Mean Squared Error (RMSE): {rmse}")
-
+* Output pada submission ini 
+Mean Absolute Error (MAE): 1.738900289487598
+Root Mean Squared Error (RMSE): 2.6692378896101645
 
